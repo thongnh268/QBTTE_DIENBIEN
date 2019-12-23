@@ -1,0 +1,2086 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head id="Head">
+    <%-include("./header")%>
+</head>
+
+<body id="Body">
+
+    <form method="post" action="/" id="Form" enctype="multipart/form-data">
+        <div class="aspNetHidden">
+            <input type="hidden" name="StylesheetManager_TSSM" id="StylesheetManager_TSSM" value="" />
+            <input type="hidden" name="ScriptManager_TSM" id="ScriptManager_TSM" value="" />
+            <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+            <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+            <input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+            <input type="hidden" name="__VIEWSTATE_CACHEKEY" id="__VIEWSTATE_CACHEKEY"
+                value="VS_k0etlxkb00meg0jeh22jf5jz_637039770731848405" />
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+        </div>
+
+        <script type="text/javascript">
+            //<![CDATA[
+            var theForm = document.forms['Form'];
+            if (!theForm) {
+                theForm = document.Form;
+            }
+
+            function __doPostBack(eventTarget, eventArgument) {
+                if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                    theForm.__EVENTTARGET.value = eventTarget;
+                    theForm.__EVENTARGUMENT.value = eventArgument;
+                    theForm.submit();
+                }
+            }
+            //]]>
+        </script>
+
+
+        <!-- <script src="./WebResource.axd?d=W3YLcjfPh0aFKDaOUkP_j_WZJRNJwTNyQTvtu3C8mGkSE_-tWZRmOIZq_lGKXFlOZ4zJWxh7ounIqUg50&amp;t=636934633200000000" type="text/javascript"></script> -->
+
+
+        <script type="text/javascript">
+            //<![CDATA[
+            var __cultureInfo = {
+                "name": "vi-VN",
+                "numberFormat": {
+                    "CurrencyDecimalDigits": 2,
+                    "CurrencyDecimalSeparator": ",",
+                    "IsReadOnly": false,
+                    "CurrencyGroupSizes": [3],
+                    "NumberGroupSizes": [3],
+                    "PercentGroupSizes": [3],
+                    "CurrencyGroupSeparator": ".",
+                    "CurrencySymbol": "₫",
+                    "NaNSymbol": "NaN",
+                    "CurrencyNegativePattern": 8,
+                    "NumberNegativePattern": 1,
+                    "PercentPositivePattern": 0,
+                    "PercentNegativePattern": 0,
+                    "NegativeInfinitySymbol": "-Infinity",
+                    "NegativeSign": "-",
+                    "NumberDecimalDigits": 2,
+                    "NumberDecimalSeparator": ",",
+                    "NumberGroupSeparator": ".",
+                    "CurrencyPositivePattern": 3,
+                    "PositiveInfinitySymbol": "Infinity",
+                    "PositiveSign": "+",
+                    "PercentDecimalDigits": 2,
+                    "PercentDecimalSeparator": ",",
+                    "PercentGroupSeparator": ".",
+                    "PercentSymbol": "%",
+                    "PerMilleSymbol": "‰",
+                    "NativeDigits": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+                    "DigitSubstitution": 1
+                },
+                "dateTimeFormat": {
+                    "AMDesignator": "SA",
+                    "Calendar": {
+                        "MinSupportedDateTime": "\/Date(-62135596800000)\/",
+                        "MaxSupportedDateTime": "\/Date(253402275599999)\/",
+                        "AlgorithmType": 1,
+                        "CalendarType": 1,
+                        "Eras": [1],
+                        "TwoDigitYearMax": 2029,
+                        "IsReadOnly": false
+                    },
+                    "DateSeparator": "/",
+                    "FirstDayOfWeek": 1,
+                    "CalendarWeekRule": 0,
+                    "FullDateTimePattern": "dd MMMM yyyy h:mm:ss tt",
+                    "LongDatePattern": "dd MMMM yyyy",
+                    "LongTimePattern": "h:mm:ss tt",
+                    "MonthDayPattern": "dd MMMM",
+                    "PMDesignator": "CH",
+                    "RFC1123Pattern": "ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027",
+                    "ShortDatePattern": "dd/MM/yyyy",
+                    "ShortTimePattern": "h:mm tt",
+                    "SortableDateTimePattern": "yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss",
+                    "TimeSeparator": ":",
+                    "UniversalSortableDateTimePattern": "yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027",
+                    "YearMonthPattern": "MMMM yyyy",
+                    "AbbreviatedDayNames": ["CN", "Hai", "Ba", "Tư", "Năm", "Sáu", "Bảy"],
+                    "ShortestDayNames": ["C", "H", "B", "T", "N", "S", "B"],
+                    "DayNames": ["Chủ Nhật", "Thứ Hai", "Thứ Ba", "Thứ Tư", "Thứ Năm", "Thứ Sáu", "Thứ Bảy"],
+                    "AbbreviatedMonthNames": ["Thg1", "Thg2", "Thg3", "Thg4", "Thg5", "Thg6", "Thg7", "Thg8", "Thg9", "Thg10", "Thg11", "Thg12", ""],
+                    "MonthNames": ["Tháng Giêng", "Tháng Hai", "Tháng Ba", "Tháng Tư", "Tháng Năm", "Tháng Sáu", "Tháng Bảy", "Tháng Tám", "Tháng Chín", "Tháng Mười", "Tháng Mười Một", "Tháng Mười Hai", ""],
+                    "IsReadOnly": false,
+                    "NativeCalendarName": "Dương Lịch",
+                    "AbbreviatedMonthGenitiveNames": ["Thg1", "Thg2", "Thg3", "Thg4", "Thg5", "Thg6", "Thg7", "Thg8", "Thg9", "Thg10", "Thg11", "Thg12", ""],
+                    "MonthGenitiveNames": ["Tháng Giêng", "Tháng Hai", "Tháng Ba", "Tháng Tư", "Tháng Năm", "Tháng Sáu", "Tháng Bảy", "Tháng Tám", "Tháng Chín", "Tháng Mười", "Tháng Mười Một", "Tháng Mười Hai", ""]
+                },
+                "eras": [1, "A.D.", null, 0]
+            }; //]]>
+        </script>
+        <!-- <div class="aspNetHidden">
+
+            <input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+            <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="HbJ8MLrnmvVUzVRZQC0+VpHddN4P/UbKebTdsgkbnmH8kwcMh+p8Ryd57lHnEndgYypqA/uMMUV95QvuywSZt24BeErWrHcPdHvgWBXRy8a5bE4/ALhpst3lEoWndhAtSCA+SuAnbJIuqke5KVac2rl76u1k9pK9px7REMYaIHGrQxGjATpaqo5E2R4aBkr0yNI3Zgl0Ulof61kA1O1D5Z4OFpZh/je2plfyeRSTe3pM6voUYK4t5GS3wqn6OU5Ps+SAnI02RdiLdZ+ZE6jz6Av9VUjk/coZM5Gu2y3stfB+aJXVYgp0RB5H+6OoUAOXLl/2NOhMoyqeNxcfY8urjteh7RHEXMlHMRjdx88B8+jSSLyqIG0lbohWWgFbmU9AA740cm0DblQyKnBAb0b3jcR9E4KFVuMeSpSwDmjxZlzPTM/1BjU0t8gNMHt0O2DNwzhofX4V3G1bEAJcy2ayU8KKXOWQ7IO0mHDu0GUk3LoUGqmc1ZDV7cAHxnE="
+            />
+        </div> -->
+        <script src="./js/dnn.servicesframework.js" type="text/javascript"></script>
+        <script src="./js/dnncore.js" type="text/javascript"></script>
+
+        <%-include("./menu")%>
+
+        <div class="fmcenter">
+            <div class="TNContent">
+                <div id="dnn_Top">
+                    <div class="DnnModule DnnModule-TNNewsSolution DnnModule-523"><a name="523"></a>
+                        <div id="dnn_ctr523_ContentPane">
+                            <!-- Start_Module_523 -->
+                            <div id="dnn_ctr523_ModuleContent" class="DNNModuleContent ModTNNewsSolutionC">
+                                <div class="tnbcns1demo_wrap mid523">
+
+                                    <div class="xshower" index="0">
+                                        <a>
+                                            <img alt="" src="./images/NEWS_IMAGES/host/2017_5/vi_quyensongcon_1.png"
+                                                class="imgnews" />
+                                        </a>
+                                        <div class="xnewsinfo">
+                                            <div style="margin:6px;">
+                                                <a style="text-decoration:none;"
+                                                    href="/slide/quyen-song-con_t114c34n339">
+                                                    <span class="xtitle">Quyền sống còn</span>
+                                                </a>
+                                                <div style="clear:both;height:8px;"></div>
+                                                <span class="xsubject"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="xshower" index="1">
+                                        <a>
+                                            <img alt="" src="./images/NEWS_IMAGES/host/2017_5/vi_quyenphattriens.png"
+                                                class="imgnews" />
+                                        </a>
+                                        <div class="xnewsinfo">
+                                            <div style="margin:6px;">
+                                                <a style="text-decoration:none;"
+                                                    href="/slide/quyen-phat-trien_t114c34n184">
+                                                    <span class="xtitle">Quyền phát triển</span>
+                                                </a>
+                                                <div style="clear:both;height:8px;"></div>
+                                                <span class="xsubject"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="xshower" index="2">
+                                        <a>
+                                            <img alt="" src="./images/NEWS_IMAGES/host/2014_5/vi-quyenbaove.png"
+                                                class="imgnews" />
+                                        </a>
+                                        <div class="xnewsinfo">
+                                            <div style="margin:6px;">
+                                                <a style="text-decoration:none;" href="/slide/quyen-bao-ve_t114c34n1">
+                                                    <span class="xtitle">Quyền bảo vệ</span>
+                                                </a>
+                                                <div style="clear:both;height:8px;"></div>
+                                                <span class="xsubject"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="xshower" index="3">
+                                        <a>
+                                            <img alt="" src="./images/NEWS_IMAGES/host/2017_5/vi_quyenthamgias.png"
+                                                class="imgnews" />
+                                        </a>
+                                        <div class="xnewsinfo">
+                                            <div style="margin:6px;">
+                                                <a style="text-decoration:none;" href="/slide/quyen-tham-gia_t114c34n2">
+                                                    <span class="xtitle">Quyền tham gia</span>
+                                                </a>
+                                                <div style="clear:both;height:8px;"></div>
+                                                <span class="xsubject"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="listnews">
+
+                                        <span index="0" class="itemx">
+
+                                        </span>
+
+                                        <span index="1" class="itemx">
+
+                                        </span>
+
+                                        <span index="2" class="itemx">
+
+                                        </span>
+
+                                        <span index="3" class="itemx">
+
+                                        </span>
+
+
+                                    </div>
+                                    <div style="clear:both;height:10px;"></div>
+                                </div>
+
+                                <div style="clear:both;"> </div>
+
+
+
+                                <div style="clear:both;"> </div>
+
+
+                                <script type="text/javascript">
+                                    jQuery(document).ready(function () {
+                                        var scop = jQuery(".mid" + '523');
+                                        scop.find(".xshower").hide();
+                                        scop.find(".xshower:first").show();
+
+                                        var show_item = function (next_index) {
+                                            scop.find(".xshower").hide().removeClass("active");
+                                            scop.find(".btn_active").removeClass("btn_active");
+                                            var nextitem = scop.find(".xshower[index=" + next_index + "]");
+                                            if (nextitem.length == 0)
+                                                nextitem = scop.find(".xshower:first");
+                                            nextitem.fadeIn().addClass("active");
+
+                                            var nextbtn = scop.find(".itemx[index=" + next_index + "]");
+                                            if (nextbtn.length == 0) {
+                                                nextbtn = scop.find(".itemx:first");
+                                            }
+                                            nextbtn.addClass("btn_active");
+                                        }
+
+                                        scop.find(".itemx").click(function () {
+                                            var me = jQuery(this);
+                                            var showindex = me.attr("index");
+                                            show_item(showindex);
+                                        });
+
+                                        var next_item = function () {
+                                            var next_index = 0;
+                                            var activeitem = scop.find(".active");
+                                            if (activeitem.length != 0) {
+                                                next_index = parseInt(activeitem.attr("index")) + 1;
+                                            }
+                                            show_item(next_index);
+                                            setTimeout(next_item, 6000);
+                                        }
+
+                                        next_item();
+                                        return false;
+                                    });
+                                </script>
+
+
+
+                            </div>
+                            <!-- End_Module_523 -->
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                </div>
+                <div class="clear">
+                </div>
+                <div class="TNMain">
+                    <div id="dnn_Top_1" class="TNTop1">
+                        <div class="DnnModule DnnModule-TNHtml DnnModule-849"><a name="849"></a>
+                            <div id="dnn_ctr849_ContentPane">
+                                <!-- Start_Module_849 -->
+                                <div id="dnn_ctr849_ModuleContent" class="DNNModuleContent ModTNHtmlC">
+                                    <style>
+                                        .tnnewscate2_nochild .xhitem {
+                                            padding: 10px 10px 5px 10px;
+                                            background: #EDECEC;
+                                            height: 115px;
+                                            overflow: hidden;
+                                        }
+
+                                        .tnnewscate2_nochild .xhitem ul li {
+                                            display: block;
+                                            background: url(./images/newsimage/bullet.png) 0 13px no-repeat;
+                                        }
+
+                                        .tnnewscate2_nochild .xhitem ul li a {
+                                            font: normal 13px/28px Open Sans Semibold;
+                                            color: #0073b9;
+                                            margin-left: 12px;
+                                            display: block
+                                        }
+
+                                        .tnnewscate2_nochild .xhitem ul li a:hover {
+                                            color: #666
+                                        }
+                                    </style>
+                                    <div class="tnnewscate2_nochild">
+                                        <div class="xcate">
+                                            <div class="xparent">
+                                                <div class="xlink">
+                                                    <span>Bảng vàng tài trợ</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="clear:both"></div>
+                                        <div class="xhitem">
+                                            <ul>
+                                                <li><a href="/danh-sach-tai-tro-hang-thang_t113c23">Danh sách tài trợ
+                                                        hàng tháng</a></li>
+                                                <li><a href="/bang-vang-tai-tro_t113c20">Bảng vàng tài trợ</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <span id="dnn_ctr849_Main_lblMessage" style="clear: both;"></span>
+
+                                </div>
+                                <!-- End_Module_849 -->
+                            </div>
+                            <div style="clear:both;"></div>
+                        </div>
+                    </div>
+                    <div id="dnn_Top_2" class="TNTop2">
+                        <div class="DnnModule DnnModule-TNHtml DnnModule-838"><a name="838"></a>
+                            <div id="dnn_ctr838_ContentPane">
+                                <!-- Start_Module_838 -->
+                                <div id="dnn_ctr838_ModuleContent" class="DNNModuleContent ModTNHtmlC">
+                                    <style>
+                                        .tnnewscate2_nochild .xhitem {
+                                            padding: 10px 10px 5px 10px;
+                                            background: #EDECEC;
+                                            height: 115px;
+                                            overflow: hidden;
+                                        }
+
+                                        .tnnewscate2_nochild .xhitem ul li {
+                                            display: block;
+                                            background: url(./images/newsimage/bullet.png) 0 13px no-repeat;
+                                        }
+
+                                        .tnnewscate2_nochild .xhitem ul li a {
+                                            font: normal 13px/28px Open Sans Semibold;
+                                            color: #0073b9;
+                                            margin-left: 12px;
+                                            display: block
+                                        }
+
+                                        .tnnewscate2_nochild .xhitem ul li a:hover {
+                                            color: #666
+                                        }
+                                    </style>
+                                    <div class="tnnewscate2_nochild">
+                                        <div class="xcate">
+                                            <div class="xparent">
+                                                <div class="xlink">
+                                                    <span>Hỗ trợ thục hiện quyền trẻ em</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="clear:both"></div>
+                                        <div class="xhitem">
+                                            <ul>
+                                                <li><a href="/quyen-song-con_t113c33">Quyền sống còn</a></li>
+                                                <li><a href="/quyen-phat-trien_t113c32">Quyền phát triển</a></li>
+                                                <li><a href="/quyen-bao-ve_t113c14">Quyền bảo vệ</a></li>
+                                                <li><a href="/quyen-tham-gia_t113c21">Quyền tham gia</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <span id="dnn_ctr838_Main_lblMessage" style="clear: both;"></span>
+
+                                </div>
+                                <!-- End_Module_838 -->
+                            </div>
+                            <div style="clear:both;"></div>
+                        </div>
+                    </div>
+                    <div id="dnn_Top_3" class="TNTop3">
+                        <div class="DnnModule DnnModule-TNHtml DnnModule-839"><a name="839"></a>
+                            <div id="dnn_ctr839_ContentPane">
+                                <!-- Start_Module_839 -->
+                                <div id="dnn_ctr839_ModuleContent" class="DNNModuleContent ModTNHtmlC">
+                                    <style>
+                                        .tnnewscate2_nochild .zhitem {
+                                            padding: 10px 10px 5px 10px;
+                                            height: 115px;
+                                            overflow: hidden;
+                                            background: #EDECEC url(./images/newsimage/maps.png) center right no-repeat;
+                                        }
+
+                                        .tnnewscate2_nochild .zhitem ul li {
+                                            display: block;
+                                            background: url(./images/newsimage/bullet.png) 0 13px no-repeat;
+                                        }
+
+                                        .tnnewscate2_nochild .zhitem ul li a {
+                                            font: normal 13px/28px Open Sans Semibold;
+                                            color: #0073b9;
+                                            margin-left: 12px;
+                                            display: block
+                                        }
+
+                                        .tnnewscate2_nochild .zhitem ul li a:hover {
+                                            color: #666
+                                        }
+                                    </style>
+                                    <div class="tnnewscate2_nochild">
+                                        <div class="xcate">
+                                            <div class="xparent">
+                                                <div class="xlink">
+                                                    <span>Trang địa phương</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="clear:both"></div>
+                                        <div class="zhitem">
+                                            <ul>
+                                                <li><a href="/he-thong-quy-btte-cac-tinh_t230c29">Hệ thống quỹ BTTE các
+                                                        tỉnh</a></li>
+                                                <li><a href="tin-dia-phuong_t113c28">Tin địa phương</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <span id="dnn_ctr839_Main_lblMessage" style="clear: both;"></span>
+
+                                </div>
+                                <!-- End_Module_839 -->
+                            </div>
+                            <div style="clear:both;"></div>
+                        </div>
+                    </div>
+                    <div class="clear">
+                    </div>
+                    <div id="dnn_Middle_1" class="TNMiddle1">
+                        <div class="DnnModule DnnModule-TNNewsSolution DnnModule-848"><a name="848"></a>
+                            <div id="dnn_ctr848_ContentPane">
+                                <!-- Start_Module_848 -->
+                                <div id="dnn_ctr848_ModuleContent" class="DNNModuleContent ModTNNewsSolutionC">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    <input type="hidden"
+                                        name="dnn$ctr848$Main$UserNewsView_TaikhoanTiepnhan$_PreviewCategoryId"
+                                        id="dnn_ctr848_Main_UserNewsView_TaikhoanTiepnhan__PreviewCategoryId" />
+
+
+
+                                    <style type="text/css">
+                                        .xtaitro {
+                                            background: #edecec;
+                                        }
+
+                                        .xtaitro .xleft {
+                                            float: left;
+                                            background: #e36f26;
+                                            margin-right: 10px;
+                                            color: #fff;
+                                            font: normal 12px/32px Open Sans Semibold;
+                                            text-transform: uppercase;
+                                            width: 22%;
+                                            padding: 0 10px;
+                                        }
+
+                                        .xtaitro .xright {
+                                            float: right;
+                                            color: #0073b9;
+                                            font: normal 12px/32px Open Sans Semibold;
+                                            text-align: center;
+                                            width: 70%;
+                                            padding: 0 10px;
+                                        }
+
+                                        .myoverlay .xheader {
+                                            text-align: center;
+                                            font: 16px/28px Open Sans Semibold;
+                                            color: #0073B9;
+                                            text-transform: uppercase
+                                        }
+
+                                        .myoverlay .xtext {
+                                            font: 14px/20px Open Sans Semibold;
+                                            color: #666;
+                                        }
+
+                                        .myoverlay .xtitle {
+                                            font: italic 13px/20px Open Sansz;
+                                            color: #333;
+                                        }
+                                    </style>
+
+                                    <div class="xtaitro">
+                                        <div class="xleft"
+                                            onclick="showDialog('myoverlayAdminform', 'mypopupAdminform');">
+                                            <span id="dnn_ctr848_Main_UserNewsView_TaikhoanTiepnhan_Label111"
+                                                style="cursor:pointer">Tài khoản tiếp nhận</span>
+                                        </div>
+                                        <div class="xright">
+                                            <marquee behavior="scroll" direction="left" scrolldelay="200"><span
+                                                    id="dnn_ctr848_Main_UserNewsView_TaikhoanTiepnhan_Label110">Tài
+                                                    khoản tiền Việt: 001.0.00.0000355 * Tài khoản ngoại tệ:
+                                                    001.0.37.0002165 * Tại: Sở giao dịch ngân hàng TMCP Ngoại thương
+                                                    Việt Nam.</span></marquee>
+                                        </div>
+                                        <div style="clear:both;"></div>
+                                    </div>
+                                    <div style="clear:both"></div>
+                                    <div id="puzone" class="myoverlay myoverlayAdminform" style="display: none;">
+                                        <div id="adminform" class="mypopup mypopupAdminform"
+                                            style="width: 500px; height: auto; display: none;">
+                                            <img onclick="javascript:closeDialog('myoverlayAdminform', 'mypopupAdminform');"
+                                                class="cssButtonClose" src="./images/close.png" alt=""
+                                                style="float: right; margin-top: 5px; cursor: pointer;" />
+
+                                            <div class="xcontent" style="padding:10px;">
+                                                <h2 class="xheader"><span
+                                                        id="dnn_ctr848_Main_UserNewsView_TaikhoanTiepnhan_Label112">Thông
+                                                        tin tài khoản tiếp nhận</span></h2>
+                                                <span class="xtitle">
+                                                    <span id="dnn_ctr848_Main_UserNewsView_TaikhoanTiepnhan_Label1">Tài
+                                                        khoản tiền Việt: </span><span
+                                                        class="xtext">001.0.00.0000355</span><br />
+                                                    <span id="dnn_ctr848_Main_UserNewsView_TaikhoanTiepnhan_Label2">Tài
+                                                        khoản ngoại tệ: </span><span
+                                                        class="xtext">001.0.37.0002165</span><br />
+                                                    <span id="dnn_ctr848_Main_UserNewsView_TaikhoanTiepnhan_Label3">Sở
+                                                        giao dịch:</span><span
+                                                        id="dnn_ctr848_Main_UserNewsView_TaikhoanTiepnhan_Label4"
+                                                        class="xtext">Ngân hàng Thương mại cổ phần Ngoại thương Việt
+                                                        Nam</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <script type="text/javascript">
+                                        function showDialog(myoverlay, mypopup) {
+                                            var p = jQuery('.' + mypopup);
+                                            var o = jQuery("." + myoverlay);
+                                            var wheight = jQuery(window).height();
+                                            var wwidth = jQuery(window).width();
+                                            o.css("height", "auto");
+                                            p.hide();
+                                            o.fadeIn();
+                                            p.show().css("margin-top", 80); //(wheight - p.height()) / 2 > 80 ? (wheight - p.height()) / 2 : 80);
+                                            jQuery("body").css('overflow', 'hidden');
+                                        };
+
+                                        function closeDialog(myoverlay, mypopup) {
+                                            jQuery('.' + myoverlay).fadeOut();
+                                            jQuery('.' + mypopup).fadeOut();
+                                            jQuery("body").css('overflow', 'auto');
+                                        };
+
+                                        function ReplaceUrlWithoutReloading(urlserver, urlclient) {
+                                            //window.history.pushState({ id: 35 }, 'Viewing item #35', '/item/35');
+                                            //window.history.pushState({ id: 1 }, urlclient, urlserver);
+                                            window.history.replaceState({
+                                                id: 1
+                                            }, urlclient, urlserver);
+                                        }
+                                    </script>
+
+
+
+                                </div>
+                                <!-- End_Module_848 -->
+                            </div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="DnnModule DnnModule-TNHtml DnnModule-861"><a name="861"></a>
+                            <div id="dnn_ctr861_ContentPane">
+                                <!-- Start_Module_861 -->
+                                <div id="dnn_ctr861_ModuleContent" class="DNNModuleContent ModTNHtmlC">
+                                    <p><img src="./images/banner%201.1.jpg" style="width: 630px; height: 126px;"></p>
+
+                                    <span id="dnn_ctr861_Main_lblMessage" style="clear: both;"></span>
+
+                                </div>
+                                <!-- End_Module_861 -->
+                            </div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="DnnModule DnnModule-TNNewsSolution DnnModule-535"><a name="535"></a>
+                            <div id="dnn_ctr535_ContentPane">
+                                <!-- Start_Module_535 -->
+                                <div id="dnn_ctr535_ModuleContent" class="DNNModuleContent ModTNNewsSolutionC">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    <div mid="535" class="tnnewscate3_nochild">
+                                        <div class="xcate">
+                                            <div class="xparent">
+                                                <div class="xlink">
+                                                    <a href="/tin-tuc-su-kien_t113c31"><span
+                                                            id="dnn_ctr535_Main_UserNewsBoxCategory_vs3_NoChild__MainCategoryName">Tin
+                                                            tức - Sự kiện</span></a>
+                                                </div>
+                                            </div>
+                                            <div id="dnn_ctr535_Main_UserNewsBoxCategory_vs3_NoChild__DanhMucCon">
+
+                                                <div class="childtab childtab535" style="display:none;">
+                                                    <ul>
+
+                                                        <li>
+                                                            <a href="/tin-tuc-su-kien/quyen-song-con_t113c33">
+                                                                <h2 class="iconheadnews">
+                                                                    <span class="xtitlehead"><span>Quyền sống
+                                                                            còn</span></span>
+                                                                </h2>
+                                                            </a>
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="/tin-tuc-su-kien/quyen-phat-trien_t113c32">
+                                                                <h2 class="iconheadnews">
+                                                                    <span class="xtitlehead"><span>Quyền phát
+                                                                            triển</span></span>
+                                                                </h2>
+                                                            </a>
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="/tin-tuc-su-kien/quyen-bao-ve_t113c14">
+                                                                <h2 class="iconheadnews">
+                                                                    <span class="xtitlehead"><span>Quyền bảo
+                                                                            vệ</span></span>
+                                                                </h2>
+                                                            </a>
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="/tin-tuc-su-kien/quyen-tham-gia_t113c21">
+                                                                <h2 class="iconheadnews">
+                                                                    <span class="xtitlehead"><span>Quyền tham
+                                                                            gia</span></span>
+                                                                </h2>
+                                                            </a>
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="/tin-tuc-su-kien/cac-chuong-trinh-khac_t113c22">
+                                                                <h2 class="iconheadnews">
+                                                                    <span class="xtitlehead"><span>Các chương trình
+                                                                            khác</span></span>
+                                                                </h2>
+                                                            </a>
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="clear"></div>
+                                        <div class="xnews">
+                                            <div class="xleft">
+                                                <div style="padding:10px;">
+
+                                                    <div class="imgnews">
+                                                        <a href="/tin-tuc-su-kien/hoi-thao-cong-bo-bo-tai-lieu-ho-tro-phuc-hoi-chuc-nang-cho-tre-em-tu-ky-o-viet-nam_t114c31n2056"
+                                                            title="Hội thảo công bố Bộ tài liệu hỗ trợ phục hồi chức năng cho trẻ em tự kỷ ở Việt Nam
+">
+                                                            <img alt="Hội thảo công bố Bộ tài liệu hỗ trợ phục hồi chức năng cho trẻ em tự kỷ ở Việt Nam
+" src="./images/NEWS_IMAGES/thanglb/2019_9/4.JPG" />
+                                                        </a>
+                                                    </div>
+                                                    <h2 class="xtitle">
+                                                        <a href="/tin-tuc-su-kien/hoi-thao-cong-bo-bo-tai-lieu-ho-tro-phuc-hoi-chuc-nang-cho-tre-em-tu-ky-o-viet-nam_t114c31n2056"
+                                                            title="Hội thảo công bố Bộ tài liệu hỗ trợ phục hồi chức năng cho trẻ em tự kỷ ở Việt Nam
+">
+                                                            Hội thảo công bố Bộ tài liệu hỗ trợ phục hồi chức năng cho
+                                                            trẻ em tự kỷ ở Việt Nam
+
+                                                        </a>
+                                                    </h2>
+                                                    <h3 class="xdes">
+                                                        Thực hiện mục tiêu của Nhà nước về việc hỗ trợ trẻ em có hoàn
+                                                        cảnh đặc biệt, khó khăn, ngày 12/9/2019 tại Hội trường Trụ sở
+                                                        các cơ quan của Quốc hội, Ủy ban các vấn đề Xã hội của Quốc hội
+                                                        phối hợp...
+                                                    </h3>
+
+                                                </div>
+                                            </div>
+                                            <div class="xright">
+
+                                                <div class="xitem">
+                                                    <h2 class="xlink">
+                                                        <a href="/tin-tuc-su-kien/thu-cua-tong-bi-thu-chu-tich-nuoc-nguyen-phu-trong-gui-thieu-nien-nhi-dong-nhan-dip-tet-trung-thu-2019_t114c31n2055"
+                                                            title="Thư của Tổng bí thư, Chủ tịch nước Nguyễn Phú Trọng gửi thiếu niên, nhi đồng nhân dịp Tết Trung thu 2019">
+                                                            Thư của Tổng bí thư, Chủ tịch nước Nguyễn Phú Trọng gửi
+                                                            thiếu niên, nhi đồng nhân dịp Tết Trung thu 2019
+                                                        </a>
+                                                    </h2>
+                                                </div>
+
+                                                <div class="xitem">
+                                                    <h2 class="xlink">
+                                                        <a href="/tin-tuc-su-kien/pho-chu-tich-nuoc-dang-thi-ngoc-thinh-tang-qua-trung-thu-cho-tre-em-quang-nam_t114c31n2054"
+                                                            title="Phó Chủ tịch nước Đặng Thị Ngọc Thịnh tặng quà trung thu cho trẻ em Quảng Nam">
+                                                            Phó Chủ tịch nước Đặng Thị Ngọc Thịnh tặng quà trung thu cho
+                                                            trẻ em Quảng Nam
+                                                        </a>
+                                                    </h2>
+                                                </div>
+
+                                                <div class="xitem">
+                                                    <h2 class="xlink">
+                                                        <a href="/tin-tuc-su-kien/chu-tich-quoc-hoi-trao-tang-qua-cho-tre-em-co-hckk-tinh-dong-thap-nhan-dip-nam-hoc-moi_t114c31n2052"
+                                                            title="Chủ tịch Quốc hội trao tặng quà cho trẻ em có HCKK tỉnh Đồng Tháp nhân dịp năm học mới">
+                                                            Chủ tịch Quốc hội trao tặng quà cho trẻ em có HCKK tỉnh Đồng
+                                                            Tháp nhân dịp năm học mới
+                                                        </a>
+                                                    </h2>
+                                                </div>
+
+                                                <div class="xitem">
+                                                    <h2 class="xlink">
+                                                        <a href="/tin-tuc-su-kien/khanh-thanh-cong-trinh-truong-mam-non-xa-tan-hanh-huyen-long-ho-tinh-vinh-long_t114c31n2053"
+                                                            title="Khánh thành công trình Trường mầm non xã Tân Hạnh, huyện Long Hồ, tỉnh Vĩnh Long ">
+                                                            Khánh thành công trình Trường mầm non xã Tân Hạnh, huyện
+                                                            Long Hồ, tỉnh Vĩnh Long
+                                                        </a>
+                                                    </h2>
+                                                </div>
+
+                                                <div class="xitem">
+                                                    <h2 class="xlink">
+                                                        <a href="/tin-dia-phuong/pho-chu-tich-nuoc-tham-tang-qua-trung-tam-nuoi-day-tre-khuyet-tat-tai-quang-ngai_t114c28n2051"
+                                                            title="Phó Chủ tịch nước thăm, tặng quà Trung tâm Nuôi dạy trẻ khuyết tật tại Quảng Ngãi">
+                                                            Phó Chủ tịch nước thăm, tặng quà Trung tâm Nuôi dạy trẻ
+                                                            khuyết tật tại Quảng Ngãi
+                                                        </a>
+                                                    </h2>
+                                                </div>
+
+                                                <div class="xitem">
+                                                    <h2 class="xlink">
+                                                        <a href="/tin-dia-phuong/khanh-thanh-diem-truong-mam-non-khu-dang-xa-trung-son-huyen-yen-lap-tinh-phu-tho_t114c28n2050"
+                                                            title="KHÁNH THÀNH ĐIỂM TRƯỜNG MẦM NON KHU ĐÂNG, XÃ TRUNG SƠN, HUYỆN YÊN LẬP, TỈNH PHÚ THỌ
+">
+                                                            KHÁNH THÀNH ĐIỂM TRƯỜNG MẦM NON KHU ĐÂNG, XÃ TRUNG SƠN,
+                                                            HUYỆN YÊN LẬP, TỈNH PHÚ THỌ
+
+                                                        </a>
+                                                    </h2>
+                                                </div>
+
+                                                <div class="xitem">
+                                                    <h2 class="xlink">
+                                                        <a href="/tin-dia-phuong/chu-tich-quoc-hoi-du-le-trao-tang-truong-tieu-hoc-va-thcs-dong-son-va-trao-tang-quy-sua-vuon-cao-viet-nam_t114c28n2049"
+                                                            title="Chủ tịch Quốc hội dự lễ trao tặng Trường Tiểu học và THCS Đồng Sơn và trao tặng Quỹ sữa vươn cao Việt Nam ">
+                                                            Chủ tịch Quốc hội dự lễ trao tặng Trường Tiểu học và THCS
+                                                            Đồng Sơn và trao tặng Quỹ sữa vươn cao Việt Nam
+                                                        </a>
+                                                    </h2>
+                                                </div>
+
+                                                <div class="xitem">
+                                                    <h2 class="xlink">
+                                                        <a href="/tin-tuc-su-kien/quy-bao-tro-tre-em-28-tinh-thanh-pho-tham-du-lop-tap-huan-nghiep-vu-tai-tinh-quang-ngai_t114c31n2048"
+                                                            title="Quỹ Bảo trợ trẻ em 28 tỉnh, thành phố tham dự lớp tập huấn nghiệp vụ tại tỉnh Quảng Ngãi">
+                                                            Quỹ Bảo trợ trẻ em 28 tỉnh, thành phố tham dự lớp tập huấn
+                                                            nghiệp vụ tại tỉnh Quảng Ngãi
+                                                        </a>
+                                                    </h2>
+                                                </div>
+
+                                                <div class="xitem">
+                                                    <h2 class="xlink">
+                                                        <a href="/tin-dia-phuong/pho-chu-tich-nuoc-dang-thi-ngoc-thinh-trao-xe-dap-va-qua-tang-cho-tre-em-co-hckk-tai-tinh-thai-nguyen_t114c28n2046"
+                                                            title="Phó Chủ tịch nước Đặng Thị Ngọc Thịnh trao xe đạp và quà tặng cho trẻ em có HCKK tại tỉnh Thái Nguyên">
+                                                            Phó Chủ tịch nước Đặng Thị Ngọc Thịnh trao xe đạp và quà
+                                                            tặng cho trẻ em có HCKK tại tỉnh Thái Nguyên
+                                                        </a>
+                                                    </h2>
+                                                </div>
+
+                                            </div>
+                                            <div style="clear: both;"></div>
+                                        </div>
+                                    </div>
+
+                                    <div style="clear: both;"></div>
+
+
+                                    <div style="clear: both;"></div>
+
+                                    <script type="text/jscript">
+                                        jQuery(document).ready(function() {
+                                            var scop = jQuery("div[mid=" + '535' + "]");
+                                            var catarea = scop.find(".catarea");
+                                            catarea.find(".xtitlehead").last().addClass("last");
+                                        });
+
+                                        function fukme(cssactive) {
+                                            jQuery('.' + cssactive).toggle("blind");
+                                        }
+                                    </script>
+
+
+
+
+
+                                </div>
+                                <!-- End_Module_535 -->
+                            </div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="DnnModule DnnModule-TNHtml DnnModule-562"><a name="562"></a>
+                            <div id="dnn_ctr562_ContentPane">
+                                <!-- Start_Module_562 -->
+                                <div id="dnn_ctr562_ModuleContent" class="DNNModuleContent ModTNHtmlC">
+                                    <a
+                                        href="/tin-dia-phuong/chuong-trinh-ao-am-mua-dong-cho-tre-em-dan-toc-thieu-so_t114c28n2015#.XRM6Ex83vIU"><img
+                                            src="./images/ao-am3.png" ></a><br>
+
+                                    <span id="dnn_ctr562_Main_lblMessage" style="clear: both;"></span>
+
+                                </div>
+                                <!-- End_Module_562 -->
+                            </div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="DnnModule DnnModule-TNNewsSolution DnnModule-517"><a name="517"></a>
+                            <div id="dnn_ctr517_ContentPane">
+                                <!-- Start_Module_517 -->
+                                <div id="dnn_ctr517_ModuleContent" class="DNNModuleContent ModTNNewsSolutionC">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    <div mid="517" class="tnalbum_gwrap">
+                                        <div class="xcate">
+                                            <div class="xparent">
+                                                <div class="xlink">
+                                                    <a href="/thu-vien-anh_t117c19"><span
+                                                            id="dnn_ctr517_Main_UserNewsBoxImages__MainCategoryName">Thư
+                                                            viện ảnh</span></a>
+                                                </div>
+                                            </div>
+                                            <div id="dnn_ctr517_Main_UserNewsBoxImages__DanhMucCon">
+
+                                                <div class="childtab childtab517" style="display:none;">
+                                                    <ul>
+
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div id="buttons">
+                                            <a href="#" id="prev">prev</a>
+                                            <div class="xcontent">
+                                                <div id="carousel">
+                                                    <div id="slides">
+                                                        <ul>
+
+                                                            <li>
+                                                                <div class="imgnews">
+                                                                    <a href="/thu-vien-anh/chum-anh-ve-tre-em-dan-toc-thieu-so_t118c19n1798"
+                                                                        title="Chùm ảnh về trẻ em dân tộc thiểu số ">
+                                                                        <img alt="Chùm ảnh về trẻ em dân tộc thiểu số "
+                                                                            src="./images/NEWS_IMAGES/thanglb/2018_6/10516720_4594548398081_1500581264801807417_n.jpg" />
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+
+                                                            <li>
+                                                                <div class="imgnews">
+                                                                    <a href="/thu-vien-anh/chum-anh-ve-nha-noi-tru-cho-tre-em-vung-cao-do-quy-bao-tro-tre-em-viet-nam-ho-tro_t118c19n1187"
+                                                                        title="Chùm ảnh về nhà nội trú cho trẻ em vùng cao do Quỹ Bảo trợ trẻ em tỉnh Điện Biên hỗ trợ">
+                                                                        <img alt="Chùm ảnh về nhà nội trú cho trẻ em vùng cao do Quỹ Bảo trợ trẻ em tỉnh Điện Biên hỗ trợ"
+                                                                            src="./images/NEWS_IMAGES/thanglb/2018_6/10532974_4601144562981_1847700361011866638_n.jpg" />
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+
+                                                            <li>
+                                                                <div class="imgnews">
+                                                                    <a href="/thu-vien-anh/chum-anh-gap-mat-dai-bieu-tre-em-co-hoan-canh-dac-biet-lan-thu-8-phan-2_t118c19n858"
+                                                                        title="Chùm ảnh: Gặp mặt đại biểu trẻ em có hoàn cảnh đặc biệt lần thứ 8 (phần 2)">
+                                                                        <img alt="Chùm ảnh: Gặp mặt đại biểu trẻ em có hoàn cảnh đặc biệt lần thứ 8 (phần 2)"
+                                                                            src="./images/NEWS_IMAGES/minhhanh/2015_6/dsc_6028.JPG" />
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+
+                                                            <li>
+                                                                <div class="imgnews">
+                                                                    <a href="/thu-vien-anh/chum-anh-gap-mat-dai-bieu-tre-em-co-hoan-canh-dac-biet-lan-thu-8-phan-1_t118c19n767"
+                                                                        title="Chùm ảnh: Gặp mặt đại biểu trẻ em có hoàn cảnh đặc biệt lần thứ 8 (phần 1)">
+                                                                        <img alt="Chùm ảnh: Gặp mặt đại biểu trẻ em có hoàn cảnh đặc biệt lần thứ 8 (phần 1)"
+                                                                            src="./images/NEWS_IMAGES/minhhanh/2015_5/img_0593.JPG" />
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+
+                                                            <li>
+                                                                <div class="imgnews">
+                                                                    <a href="/thu-vien-anh/chuong-trinh-tai-tro-giao-duc-som-kidsmart_t118c19n441"
+                                                                        title="Chương trình Tài trợ Giáo dục sớm KidSmart">
+                                                                        <img alt="Chương trình Tài trợ Giáo dục sớm KidSmart"
+                                                                            src="./images/NEWS_IMAGES/thanglb/2014_7/img_3962.JPG" />
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+
+                                                            <li>
+                                                                <div class="imgnews">
+                                                                    <a href="/thu-vien-anh/tre-em-hom-nay-the-gioi-ngay-mai_t118c19n176"
+                                                                        title="Trẻ em hôm nay thế giới ngày mai">
+                                                                        <img alt="Trẻ em hôm nay thế giới ngày mai"
+                                                                            src="./images/NEWS_IMAGES/host/2014_5/tre_em_2.jpg" />
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+
+                                                            <li>
+                                                                <div class="imgnews">
+                                                                    <a href="/thu-vien-anh/tre-em-hoc-tap-vui-choi_t118c19n174"
+                                                                        title="Trẻ em học tập vui chơi">
+                                                                        <img alt="Trẻ em học tập vui chơi"
+                                                                            src="./images/NEWS_IMAGES/host/2014_5/tre_em.jpg" />
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+
+                                                            <li>
+                                                                <div class="imgnews">
+                                                                    <a href="/thu-vien-anh/tre-em-vui-choi_t118c19n79"
+                                                                        title="Trẻ em vui chơi">
+                                                                        <img alt="Trẻ em vui chơi"
+                                                                            src="./images/NEWS_IMAGES/host/2014_5/951dfab3ab12c7img.jpg" />
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+
+                                                            <li>
+                                                                <div class="imgnews">
+                                                                    <a href="/thu-vien-anh/tre-em-vung-cao_t118c19n77"
+                                                                        title="Trẻ em vùng cao">
+                                                                        <img alt="Trẻ em vùng cao"
+                                                                            src="./images/NEWS_IMAGES/host/2014_5/tre_em_vung_cao_6438.jpg" />
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="#" id="next">next</a>
+                                            <div style="clear: both;"></div>
+                                        </div>
+                                    </div>
+
+                                    <div style="clear: both;"></div>
+
+
+                                    <div style="clear: both;">
+                                    </div>
+
+                                    <script type="text/jscript">
+                                        jQuery(document).ready(function() {
+                                            var scop = jQuery("div[mid=" + '517' + "]");
+                                            var catarea = scop.find(".catarea");
+                                            catarea.find(".xtitlehead").last().addClass("last");
+                                        });
+
+                                        function fukme(cssactive) {
+                                            jQuery('.' + cssactive).toggle("blind");
+                                        }
+                                    </script>
+
+                                    <script type="text/javascript" language="javascript">
+                                        function startslide() {
+                                            var speed = 5000;
+                                            var run = setInterval('rotate()', speed);
+                                            var item_width = jQuery('#slides li').outerWidth();
+                                            var left_value = item_width * (-1);
+                                            jQuery('#slides li:first').before(jQuery('#slides li:last'));
+                                            jQuery('#slides ul').css({
+                                                'left': left_value
+                                            });
+                                            jQuery('#prev').click(function () {
+                                                var left_indent = parseInt(jQuery('#slides ul').css('left')) + item_width;
+                                                jQuery('#slides ul:not(:animated)').animate({
+                                                    'left': left_indent
+                                                }, 200, function () {
+                                                    jQuery('#slides li:first').before(jQuery('#slides li:last'));
+                                                    jQuery('#slides ul').css({
+                                                        'left': left_value
+                                                    });
+
+                                                });
+                                                return false;
+                                            });
+                                            jQuery('#next').click(function () {
+                                                var left_indent = parseInt(jQuery('#slides ul').css('left')) - item_width;
+                                                jQuery('#slides ul:not(:animated)').animate({
+                                                    'left': left_indent
+                                                }, 200, function () {
+                                                    jQuery('#slides li:last').after(jQuery('#slides li:first'));
+                                                    jQuery('#slides ul').css({
+                                                        'left': left_value
+                                                    });
+                                                });
+                                                return false;
+                                            });
+                                            jQuery('#slides').hover(
+                                                function () {
+                                                    clearInterval(run);
+                                                },
+                                                function () {
+                                                    run = setInterval('rotate()', speed);
+                                                }
+                                            );
+                                        }
+
+                                        // jQuery(document).ready(function() {
+                                        //     startslide();
+                                        //     Sys.Application.add_load(startslide);
+                                        // });
+
+                                        function rotate() {
+                                            jQuery('#next').click();
+                                        }
+                                    </script>
+
+
+
+
+
+
+                                </div>
+                                <!-- End_Module_517 -->
+                            </div>
+                            <div style="clear:both;"></div>
+                        </div>
+                    </div>
+                    <div id="dnn_Middle_2" class="TNMiddle2">
+                        <div class="DnnModule DnnModule-TNNewsSolution DnnModule-520"><a name="520"></a>
+                            <div id="dnn_ctr520_ContentPane">
+                                <!-- Start_Module_520 -->
+                                <div id="dnn_ctr520_ModuleContent" class="DNNModuleContent ModTNNewsSolutionC">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    <div class="tnbvdemo_wrap mid520">
+                                        <div class="xcaption">
+                                            <div class="xtext">
+                                                <a href='/video_t215c18'>
+                                                    Video
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div style="clear:both"></div>
+                                        <div id="player" class="xboxvideo">
+                                            <embed width="320" height="180" type="application/x-shockwave-flash"
+                                                src="./DesktopModules/TNNewsSolution/swfplayer/flvplayer.swf"
+                                                id="playerID" name="movie_player" bgcolor="#000000" quality="high"
+                                                allowfullscreen="true" wmode="transparent" allowscriptaccess="always"
+                                                flashvars="file=yyy.swf&amp;height=180&amp;width=320&amp;image=/DesktopModules/TNNewsSolution/swfplayer/preview.jpg&amp;autostart=false">
+                                        </div>
+                                        <div class="xvideotitle"></div>
+                                        <div class="videoarea">
+                                            <img class="arrow" onclick="loadVideo(-1);" src="./images/varrow_left.png"
+                                                style="float: left;left: 3px;" />
+
+                                            <img title="Phóng sự Tháng Hành động vì trẻ em và Giải đá bóng vô địch Quốc gia cho trẻ em có HCĐB năm 2019"
+                                                onclick="show_video(this);"
+                                                mediaurl="/Portals/0/VIDEO/2019_6/ps_thang_hanh_dong_vi_tre_em.flv"
+                                                style="display:none;" class="img"
+                                                src="./images/NEWS_IMAGES/thanglb/2019_6/15.JPG" />
+
+                                            <img title="Trailer giới thiệu chương trình Mùa xuân cho em lần thứ 12 năm 2019"
+                                                onclick="show_video(this);"
+                                                mediaurl="/Portals/0/VIDEO/2019_1/trailer_mua_xuan_xuat_lai.flv"
+                                                style="display:none;" class="img"
+                                                src="./images/NEWS_IMAGES/ngantt/2018_12/img_7909.JPG" />
+
+                                            <img title="Chương trình Ánh mắt trẻ thơ với chủ đề " Cận thị thời công nghệ
+                                                đồng hành cùng con bảo vê mắt "" onclick="show_video(this);"
+                                                mediaurl="/Portals/0/VIDEO/2018_11/anh_mat_tre_tho_20183.flv"
+                                                style="display:none;" class="img"
+                                                src="./images/NEWS_IMAGES/ngantt/2017_9/img_1385.JPG" />
+
+                                            <img title="Phóng sự khánh thành công trình xây dựng Trường PTDT bán trú TH và THCS xã Xín Chải"
+                                                onclick="show_video(this);"
+                                                mediaurl="/Portals/0/VIDEO/2017_8/phong_su_xin_chai_plv.flv"
+                                                style="display:none;" class="img"
+                                                src="./images/NEWS_IMAGES/thanglb/2017_8/img_3182.JPG" />
+
+                                            <img class="arrow" onclick="loadVideo(1);" style="right: 0px;"
+                                                src="./images/varrow_right.png" style="float: right;" />
+
+
+                                        </div>
+
+                                        <div style="clear: both; "></div>
+                                    </div>
+                                    <div style="clear: both;"></div>
+
+
+                                    <div style="clear: both;">
+                                    </div>
+
+                                    <script type="text/javascript">
+                                        var first_bood = true;
+                                        jQuery(document).ready(function () {
+                                            loadVideo(1);
+                                            jQuery(".img").click(function () {
+                                                var scop = jQuery(".mid" + '520');
+                                                var me = jQuery(this);
+                                                scop.find(".selected").removeClass("selected");
+                                                me.addClass("selected");
+                                            });
+                                            jQuery(".img:first").click();
+                                        });
+
+                                        function loadVideo(seed) {
+                                            var scop = jQuery(".mid" + '520');
+
+                                            var x;
+                                            if (seed == 1) {
+                                                x = scop.find(".xshow:last");
+                                                if (x.length > 0 && x.next(".img").length == 0) {
+                                                    return;
+                                                }
+                                            } else {
+                                                x = scop.find(".xshow:first");
+                                                if (x.length > 0 && x.prev(".img").length == 0) {
+                                                    return;
+                                                }
+                                            }
+
+                                            scop.find(".xshow").attr("class", "img").hide();
+
+                                            var limit = 4;
+                                            if (x.length <= 0) {
+                                                x = scop.find(".img:first");
+                                                x.addClass("xshow").fadeIn();
+                                                limit = limit - 1;
+                                            }
+
+                                            for (i = 0; i < limit; i++) {
+                                                if (seed == 1)
+                                                    x = x.next(".img");
+                                                else
+                                                    x = x.prev(".img");
+                                                x.addClass("xshow").fadeIn(1500);
+                                            }
+                                            jQuery(".xshow:first").addClass("first");
+                                            jQuery(".xshow:last").addClass("last");
+                                        }
+
+                                        function show_video(obj) {
+                                            var scop = jQuery(".mid" + '520');
+                                            var me = jQuery(obj);
+                                            var embed_content = ""
+                                            var mediaurl = me.attr("MediaUrl");
+                                            scop.find(".xvideotitle").html(me.attr("title"));
+
+                                            var ap = 1;
+                                            if (first_bood == true) {
+                                                ap = 0;
+                                            }
+                                            if (mediaurl.indexOf("youtube.com") >= 0)
+                                                embed_content = '<iframe width="320" height="180" src="' + mediaurl + '?autoplay=' + ap + '&amp;loop=0&amp;rel=0" frameborder="0" allowfullscreen></iframe>'
+                                            else {
+                                                embed_content = "" +
+                                                    "<embed height='180' width='320' " +
+                                                    "flashvars='file=" + mediaurl +
+                                                    "&height=180" +
+                                                    "&width=320" +
+                                                    "&image=/DesktopModules/TNNewsSolution/swfplayer/logo.jpg" +
+                                                    //"&image=" + me.attr("src") +
+                                                    "&autostart=" + !first_bood +
+                                                    "' allowscriptaccess='always' " +
+                                                    "wmode='transparent' " +
+                                                    "allowfullscreen='true' " +
+                                                    "quality='high' " +
+                                                    "bgcolor='#000000' " +
+                                                    "name='movie_player' " +
+                                                    "id='playerID'  " +
+                                                    "src='/DesktopModules/TNNewsSolution/swfplayer/player.swf' " +
+                                                    "type='application/x-shockwave-flash'/>";
+                                                if (!!document.createElement('video').canPlayType && mediaurl.indexOf(".mp4") > 0) {
+                                                    embed_content = "<video width='100%' controls>" +
+                                                        "<source src='" + mediaurl + "' type='video/mp4'>" +
+                                                        "</video>";
+                                                }
+                                            }
+                                            if (first_bood)
+                                                first_bood = !first_bood;
+                                            jQuery("#player").html(embed_content);
+                                            return false;
+                                        }
+                                    </script>
+
+
+
+
+
+                                </div>
+                                <!-- End_Module_520 -->
+                            </div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="DnnModule DnnModule-TNNewsSolution DnnModule-524"><a name="524"></a>
+                            <div id="dnn_ctr524_ContentPane">
+                                <!-- Start_Module_524 -->
+                                <div id="dnn_ctr524_ModuleContent" class="DNNModuleContent ModTNNewsSolutionC">
+                                    <div mid="524" class="tnnewscate1_nochild">
+                                        <div class="xcate">
+                                            <div class="xparent">
+                                                <div class="xlink">
+                                                    <a href="/thong-tin-tre-em_t113c72"><span
+                                                            id="dnn_ctr524_Main_UserNewsBoxCategory_vs3_NoChild1__MainCategoryName">Thông
+                                                            tin trẻ em</span></a>
+                                                </div>
+                                            </div>
+                                            <div id="dnn_ctr524_Main_UserNewsBoxCategory_vs3_NoChild1__DanhMucCon">
+
+                                                <div class="childtab childtab524" style="display:none;">
+                                                    <ul>
+
+                                                        <li>
+                                                            <a href="/tre-em-da-duoc-giup-do_t113c73">
+                                                                <h2 class="iconheadnews">
+                                                                    <span class="xtitlehead"><span>Trẻ em đã được giúp
+                                                                            đỡ</span></span>
+                                                                </h2>
+                                                            </a>
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="/tre-em-can-giup-do_t113c74">
+                                                                <h2 class="iconheadnews">
+                                                                    <span class="xtitlehead"><span>Trẻ em cần giúp
+                                                                            đỡ</span></span>
+                                                                </h2>
+                                                            </a>
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="/cac-hoat-dong-ve-tre-em_t113c75">
+                                                                <h2 class="iconheadnews">
+                                                                    <span class="xtitlehead"><span>Các hoạt động về trẻ
+                                                                            em</span></span>
+                                                                </h2>
+                                                            </a>
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="/guong-sang-tre-em_t113c76">
+                                                                <h2 class="iconheadnews">
+                                                                    <span class="xtitlehead"><span>Gương sáng trẻ
+                                                                            em</span></span>
+                                                                </h2>
+                                                            </a>
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="/kien-thuc-tre-em_t113c77">
+                                                                <h2 class="iconheadnews">
+                                                                    <span class="xtitlehead"><span>Kiến thức trẻ
+                                                                            em</span></span>
+                                                                </h2>
+                                                            </a>
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="xnews">
+
+                                            <div class="xitem">
+                                                <div class="imgnews">
+                                                    <a href="/tin-tuc-su-kien/thu-cua-tong-bi-thu-chu-tich-nuoc-nguyen-phu-trong-gui-thieu-nien-nhi-dong-nhan-dip-tet-trung-thu-2019_t114c31n2055"
+                                                        title="Thư của Tổng bí thư, Chủ tịch nước Nguyễn Phú Trọng gửi thiếu niên, nhi đồng nhân dịp Tết Trung thu 2019">
+                                                        <img alt="Thư của Tổng bí thư, Chủ tịch nước Nguyễn Phú Trọng gửi thiếu niên, nhi đồng nhân dịp Tết Trung thu 2019"
+                                                            src="./images/NEWS_IMAGES/thanglb/2019_9/tongbithunguyenphutrong_pnfv.jpg" />
+                                                    </a>
+                                                </div>
+                                                <h2 class="xlink">
+                                                    <a class="zlinkmain"
+                                                        href="/tin-tuc-su-kien/thu-cua-tong-bi-thu-chu-tich-nuoc-nguyen-phu-trong-gui-thieu-nien-nhi-dong-nhan-dip-tet-trung-thu-2019_t114c31n2055"
+                                                        title="Thư của Tổng bí thư, Chủ tịch nước Nguyễn Phú Trọng gửi thiếu niên, nhi đồng nhân dịp Tết Trung thu 2019">
+                                                        Thư của Tổng bí thư, Chủ tịch nước Nguyễn Phú Trọng gửi thiếu
+                                                        niên, nhi đồng nhân dịp Tết Trung...
+                                                    </a>
+                                                </h2>
+                                                <div style="clear: both;"></div>
+                                            </div>
+                                            <div style="clear: both;"></div>
+
+                                            <div style="clear: both;"></div>
+
+                                            <div class="xitem">
+                                                <div class="imgnews">
+                                                    <a href="/tin-tuc-su-kien/doi-ha-tinh-dang-quang-vo-dich-giai-bong-da-quoc-gia-danh-cho-tre-em-co-hoan-canh-dac-biet-nam-2019_t114c31n2044"
+                                                        title="Đội Hà Tĩnh đăng quang vô địch giải bóng đá quốc gia dành cho trẻ em có hoàn cảnh đặc biệt năm 2019">
+                                                        <img alt="Đội Hà Tĩnh đăng quang vô địch giải bóng đá quốc gia dành cho trẻ em có hoàn cảnh đặc biệt năm 2019"
+                                                            src="./images/NEWS_IMAGES/ngantt/2019_8/img_1304.jpg" />
+                                                    </a>
+                                                </div>
+                                                <h2 class="xlink">
+                                                    <a href="/tin-tuc-su-kien/doi-ha-tinh-dang-quang-vo-dich-giai-bong-da-quoc-gia-danh-cho-tre-em-co-hoan-canh-dac-biet-nam-2019_t114c31n2044"
+                                                        title="Đội Hà Tĩnh đăng quang vô địch giải bóng đá quốc gia dành cho trẻ em có hoàn cảnh đặc biệt năm 2019">
+                                                        Đội Hà Tĩnh đăng quang vô địch giải bóng đá quốc gia dành cho
+                                                        trẻ em có hoàn cảnh đặc biệt năm 2019
+                                                    </a>
+                                                </h2>
+                                                <div style="clear: both;"></div>
+                                            </div>
+                                            <div style="clear: both;"></div>
+
+                                            <div style="clear: both;"></div>
+                                        </div>
+                                    </div>
+
+                                    <div style="clear: both;"></div>
+
+
+                                    <div style="clear: both;"></div>
+
+                                    <script type="text/jscript">
+                                        jQuery(document).ready(function() {
+                                            var scop = jQuery("div[mid=" + '524' + "]");
+                                            var catarea = scop.find(".catarea");
+                                            catarea.find(".xtitlehead").last().addClass("last");
+                                        });
+
+                                        function fukme(cssactive) {
+                                            jQuery('.' + cssactive).toggle("blind");
+                                        }
+                                    </script>
+
+
+
+
+
+                                </div>
+                                <!-- End_Module_524 -->
+                            </div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="DnnModule DnnModule-TNNewsSolution DnnModule-874"><a name="874"></a>
+                            <div id="dnn_ctr874_ContentPane">
+                                <!-- Start_Module_874 -->
+                                <div id="dnn_ctr874_ModuleContent" class="DNNModuleContent ModTNNewsSolutionC">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    <div mid="874" class="tnnewscate1_nochild">
+                                        <div class="xcate">
+                                            <div class="xparent">
+                                                <div class="xlink">
+                                                    <a href="/nhu-cau-tre-em_t113c101"><span
+                                                            id="dnn_ctr874_Main_UserNewsBoxCategory_vs3_NoChild1__MainCategoryName">Nhu
+                                                            cầu trẻ em</span></a>
+                                                </div>
+                                            </div>
+                                            <div id="dnn_ctr874_Main_UserNewsBoxCategory_vs3_NoChild1__DanhMucCon">
+
+                                                <div class="childtab childtab874" style="display:none;">
+                                                    <ul>
+
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="xnews">
+
+                                            <div class="xitem">
+                                                <div class="imgnews">
+                                                    <a href="/tin-dia-phuong/chuong-trinh-ao-am-mua-dong-cho-tre-em-dan-toc-thieu-so_t114c28n2015"
+                                                        title="CHƯƠNG TRÌNH ÁO ẤM MÙA ĐÔNG CHO TRẺ EM DÂN TỘC THIỂU SỐ">
+                                                        <img alt="CHƯƠNG TRÌNH ÁO ẤM MÙA ĐÔNG CHO TRẺ EM DÂN TỘC THIỂU SỐ"
+                                                            src="./images/NEWS_IMAGES/thanglb/2019_6/ao_am.jpg" />
+                                                    </a>
+                                                </div>
+                                                <h2 class="xlink">
+                                                    <a class="zlinkmain"
+                                                        href="/tin-dia-phuong/chuong-trinh-ao-am-mua-dong-cho-tre-em-dan-toc-thieu-so_t114c28n2015"
+                                                        title="CHƯƠNG TRÌNH ÁO ẤM MÙA ĐÔNG CHO TRẺ EM DÂN TỘC THIỂU SỐ">
+                                                        CHƯƠNG TRÌNH ÁO ẤM MÙA ĐÔNG CHO TRẺ EM DÂN TỘC THIỂU SỐ
+                                                    </a>
+                                                </h2>
+                                                <div style="clear: both;"></div>
+                                            </div>
+                                            <div style="clear: both;"></div>
+
+                                            <div style="clear: both;"></div>
+
+                                            <div style="clear: both;"></div>
+                                        </div>
+                                    </div>
+
+                                    <div style="clear: both;"></div>
+
+
+                                    <div style="clear: both;"></div>
+
+                                    <script type="text/jscript">
+                                        jQuery(document).ready(function() {
+                                            var scop = jQuery("div[mid=" + '874' + "]");
+                                            var catarea = scop.find(".catarea");
+                                            catarea.find(".xtitlehead").last().addClass("last");
+                                        });
+
+                                        function fukme(cssactive) {
+                                            jQuery('.' + cssactive).toggle("blind");
+                                        }
+                                    </script>
+
+
+
+
+
+                                </div>
+                                <!-- End_Module_874 -->
+                            </div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="DnnModule DnnModule-TNNewsSolution DnnModule-752"><a name="752"></a>
+                            <div id="dnn_ctr752_ContentPane">
+                                <!-- Start_Module_752 -->
+                                <div id="dnn_ctr752_ModuleContent" class="DNNModuleContent ModTNNewsSolutionC">
+
+
+                                    <div class="tnbcndemo_wrap">
+                                        <div class="xheader">
+                                            <div class="xlink">
+                                                <a href="/van-ban_t122c30">
+                                                    <span id="dnn_ctr752_Main_UserTaiLieuList_lbTitleDocument">Văn
+                                                        bản</span>
+                                                </a>
+                                                <select name="dnn$ctr752$Main$UserTaiLieuList$_LoaiVanBan"
+                                                    id="dnn_ctr752_Main_UserTaiLieuList__LoaiVanBan" class="text-box"
+                                                    style="display: none;">
+                                                    <option selected="selected" value=""></option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div style="clear:both"></div>
+                                        <div class="gmaincontent">
+                                            <div id="dnn_ctr752_Main_UserTaiLieuList_up">
+
+                                                <div id="dnn_ctr752_Main_UserTaiLieuList_UpdateProgress1"
+                                                    style="display:none;">
+
+                                                    <div class="ui-widget-overlay" style="text-align: center; position: fixed; top: 0px;
+                            left: 0px; width: 1600px; height: 1200px; z-index: 1001;">
+                                                        <img alt="Dang tai..."
+                                                            style="position: fixed; top: 250px; left: 50%;"
+                                                            src="./images/progressbar.gif" />
+                                                        <img alt="Dang tai..."
+                                                            style="position: fixed; top: 250px; left: 50%;"
+                                                            src="./images/progressbar.gif" /><img alt="Dang tai..."
+                                                            style="position: fixed; top: 250px; left: 50%;"
+                                                            src="./images/progressbar.gif" /></div>
+
+                                                </div>
+
+                                                <table border="0" width="100%" cellpadding="0" cellspacing="0">
+                                                    <tr>
+                                                        <td style="width: 105px; display: none;">
+                                                            <span style="margin-left: 10px;">
+                                                                <span id="dnn_ctr752_Main_UserTaiLieuList_Label6">Lĩnh
+                                                                    vực văn bản</span></span>
+                                                        </td>
+                                                        <td style="text-align: right; display: none;">
+                                                            <select
+                                                                name="dnn$ctr752$Main$UserTaiLieuList$_LinhVucVanBan"
+                                                                id="dnn_ctr752_Main_UserTaiLieuList__LinhVucVanBan"
+                                                                class="NormalTextBox" style="width:260px;">
+                                                                <option selected="selected" value="">---Tất cả lĩnh
+                                                                    vực---</option>
+
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="display: none;">
+                                                            <span>
+                                                                <span id="dnn_ctr752_Main_UserTaiLieuList_Label7">Số văn
+                                                                    bản</span></span>
+                                                        </td>
+                                                        <td style="display: none;">
+                                                            <input name="dnn$ctr752$Main$UserTaiLieuList$txtSymbol"
+                                                                type="text"
+                                                                id="dnn_ctr752_Main_UserTaiLieuList_txtSymbol"
+                                                                style="width:250px;" />
+                                                        </td>
+                                                        <td style="display: none;">
+                                                            <span style="margin-left: 10px;"><span>
+                                                                    <span
+                                                                        id="dnn_ctr752_Main_UserTaiLieuList_Label8">Trích
+                                                                        yếu</span></span>
+                                                            </span>
+                                                        </td>
+                                                        <td style="text-align: right; display: none">
+                                                            <input name="dnn$ctr752$Main$UserTaiLieuList$_Keyword"
+                                                                type="text"
+                                                                id="dnn_ctr752_Main_UserTaiLieuList__Keyword"
+                                                                style="width:250px;" />
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="display: none;">
+                                                            <span>
+                                                                <span id="dnn_ctr752_Main_UserTaiLieuList_Label9">Nơi
+                                                                    ban hành</span></span>
+                                                        </td>
+                                                        <td style="display: none;">
+                                                            <select name="dnn$ctr752$Main$UserTaiLieuList$_NoiBanHanh"
+                                                                id="dnn_ctr752_Main_UserTaiLieuList__NoiBanHanh"
+                                                                class="text-box" style="width: 260px;">
+                                                                <option selected="selected" value="">---Tất cả nơi ban
+                                                                    h&#224;nh---</option>
+
+                                                            </select>
+                                                        </td>
+                                                        <td style="display: none;">
+                                                            <span style="margin-left: 10px;">
+                                                                <span id="dnn_ctr752_Main_UserTaiLieuList_Label10">Năm
+                                                                    ban hành</span></span>
+                                                        </td>
+                                                        <td style="text-align: right; display: none">
+                                                            <input name="dnn$ctr752$Main$UserTaiLieuList$_NamBanHanh"
+                                                                type="text"
+                                                                id="dnn_ctr752_Main_UserTaiLieuList__NamBanHanh"
+                                                                style="width:173px;" />
+                                                            <input type="submit"
+                                                                name="dnn$ctr752$Main$UserTaiLieuList$Button1" value=""
+                                                                id="dnn_ctr752_Main_UserTaiLieuList_Button1"
+                                                                class="cssinputSearch smallsearch" style="width: 50px; margin-left: 18px; margin-right: 2px; text-align: center;" />
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <input type="hidden" name="dnn$ctr752$Main$UserTaiLieuList$_DanhMucID"
+                                                    id="dnn_ctr752_Main_UserTaiLieuList__DanhMucID" value="30" />
+                                                <div style="clear: both;">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="xcontent">
+                                            <div id="dnn_ctr752_Main_UserTaiLieuList_UpdatePanel2">
+
+                                                <table cellpadding="4" style="margin: auto;border-collapse:collapse"
+                                                    class="xtable">
+                                                    <tbody>
+
+                                                        <tr>
+                                                            <td>
+                                                                <div class="xtitle">
+                                                                    <a href='/Portals/0/TAILIEU/thanglb/2018_7/hdsd_treem_diaphuong_update.docx'
+                                                                        title='Hướng dẫn sử dụng phần mềm CSDL Quỹ BTTEVN'
+                                                                        target="_blank" class="xlinktitle">
+                                                                        Hướng dẫn sử dụng phần mềm CSDL Quỹ BTTEVN
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+                                                            <td style="width:20%">
+                                                                <a href='/DesktopModules/TNNewsSolution/UserNewsList_TaiLieu_Download.ashx?url=/Portals/0/TAILIEU/thanglb/2018_7/hdsd_treem_diaphuong_update.docx'
+                                                                    target="_blank" class="Download"></a>
+                                                                <div class="ScrollarrowDownload"
+                                                                    onclick='popupChoosefile(1806);' title="Tải về">
+                                                                </div>
+                                                                <div class="Choosefile choosefile1806 ">
+                                                                    <div class="choosefilewarp">
+                                                                        <div class="scrollbar">
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <div class="xtitle">
+                                                                    <a href='/Portals/0/TAILIEU/thanglb/2016_7/tai_lieu_tap_huan_tc_ke_toan_nam_2016.docx'
+                                                                        title='tai lieu tai chinh ke toan'
+                                                                        target="_blank" class="xlinktitle">
+                                                                        tai lieu tai chinh ke toan
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+                                                            <td style="width:20%">
+                                                                <a href='/DesktopModules/TNNewsSolution/UserNewsList_TaiLieu_Download.ashx?url=/Portals/0/TAILIEU/thanglb/2016_7/tai_lieu_tap_huan_tc_ke_toan_nam_2016.docx'
+                                                                    target="_blank" class="Download"></a>
+                                                                <div class="ScrollarrowDownload"
+                                                                    onclick='popupChoosefile(1348);' title="Tải về">
+                                                                </div>
+                                                                <div class="Choosefile choosefile1348 ">
+                                                                    <div class="choosefilewarp">
+                                                                        <div class="scrollbar">
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                                <table cellspacing="0" style="margin: auto; border-collapse: collapse; width: 100%;
+                    display: none; border-bottom: 1px solid #dddddd; border-right: 1px solid #dddddd;
+                    border-left: 1px solid #dddddd">
+                                                    <tr>
+                                                        <td
+                                                            style="vertical-align: top; padding-top: 2px; padding-bottom: 2px;">
+
+                                                            <div class="spanexcel" style="display: none;">
+                                                                <input type="submit"
+                                                                    name="dnn$ctr752$Main$UserTaiLieuList$Button3"
+                                                                    value="Xuất excel"
+                                                                    id="dnn_ctr752_Main_UserTaiLieuList_Button3"
+                                                                    class="da-button blue"
+                                                                    style="float: left; min-width: 110px; padding-right: 30px;" />
+                                                                <img src="./images/none.png" class="cssiconxuatexcel" />
+                                                                <div style="clear: both;">
+                                                                </div>
+                                                                <div class="J-M fixwit">
+                                                                    <div class="SK">
+                                                                        <div class="J-N ">
+                                                                            <a id="dnn_ctr752_Main_UserTaiLieuList_LinkButton3"
+                                                                                href="javascript:__doPostBack(&#39;dnn$ctr752$Main$UserTaiLieuList$LinkButton3&#39;,&#39;&#39;)">
+                                                                                <span>
+                                                                                    <span
+                                                                                        id="dnn_ctr752_Main_UserTaiLieuList_Label11">Xuất
+                                                                                        toàn bộ</span>
+                                                                                </span>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="J-N ">
+                                                                            <a id="dnn_ctr752_Main_UserTaiLieuList_LinkButton4"
+                                                                                href="javascript:__doPostBack(&#39;dnn$ctr752$Main$UserTaiLieuList$LinkButton4&#39;,&#39;&#39;)">
+                                                                                <span>
+                                                                                    <span
+                                                                                        id="dnn_ctr752_Main_UserTaiLieuList_Label12">Xuất
+                                                                                        bản ghi được chọn</span></span>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="J-Kh" style="display: none">
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="PagingContainer">
+                                                                <ul>
+                                                                    <li class="pagedes"></li>
+                                                                </ul>
+                                                            </div>
+                                                        </td>
+                                                        <td style="padding-bottom: 5px;">
+                                                            <div class="PagingContainer"><span
+                                                                    style="color:red;font-size:11px;">Không tìm thấy bản
+                                                                    ghi nào</span></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <div style="float: left; clear: both;">
+
+
+                                                </div>
+
+                                            </div>
+                                            <div style="clear: both;"></div>
+                                            <input type="hidden" name="dnn$ctr752$Main$UserTaiLieuList$_CurrentPage"
+                                                id="dnn_ctr752_Main_UserTaiLieuList__CurrentPage" value="0" />
+                                        </div>
+                                        <div style="clear: both;"></div>
+                                        <input type="hidden" name="dnn$ctr752$Main$UserTaiLieuList$hdid"
+                                            id="dnn_ctr752_Main_UserTaiLieuList_hdid" />
+                                        <input type="hidden" name="dnn$ctr752$Main$UserTaiLieuList$hdids"
+                                            id="dnn_ctr752_Main_UserTaiLieuList_hdids" />
+                                    </div>
+                                    <div style="clear: both;"></div>
+
+                                    <script type="text/javascript">
+                                        function collectid(obj, hdids) {
+                                            var listid = "";
+                                            if (obj != null) {
+                                                var checkall = (jQuery(obj).is(':checked'));
+                                                jQuery("[oid]").attr("checked", checkall);
+                                            }
+                                            var listoid = jQuery("[oid]:checked");
+                                            //              jQuery(".table-bordered tr").removeClass("table-borderedtriecheckboxhover");
+                                            for (i = 0; i < listoid.length; i++) {
+                                                listid += ";" + jQuery(listoid[i]).attr("oid");
+                                                //              jQuery(listoid[i]).parent().parent().addClass("table-borderedtriecheckboxhover");
+                                            }
+                                            jQuery(hdids).val(listid);
+                                        }
+
+
+                                        function popupChoosefile(id) {
+
+                                            var scop = jQuery(".choosefile" + id);
+                                            if (scop.hasClass("ChoosefileActive")) {
+                                                scop.toggle("blind").removeClass("ChoosefileActive");
+                                            } else {
+                                                jQuery(".ChoosefileActive").toggle("blind");
+                                                jQuery(".Choosefile").removeClass("ChoosefileActive");
+                                                scop.toggle("blind").addClass("ChoosefileActive");
+                                            }
+                                        }
+                                    </script>
+
+
+
+
+
+                                </div>
+                                <!-- End_Module_752 -->
+                            </div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="DnnModule DnnModule-TNHtml DnnModule-862"><a name="862"></a>
+                            <div id="dnn_ctr862_ContentPane">
+                                <!-- Start_Module_862 -->
+                                <div id="dnn_ctr862_ModuleContent" class="DNNModuleContent ModTNHtmlC">
+                                    <a href="/ban-tin-noi-bo_t109c26" target="_blank"><img
+                                            src="./images/HTML/bantinnoibo.jpg"
+                                            style="margin-top:10px; width:100%" /></a>
+
+                                    <span id="dnn_ctr862_Main_lblMessage" style="clear: both;"></span>
+
+                                </div>
+                                <!-- End_Module_862 -->
+                            </div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="DnnModule DnnModule-TNHtml DnnModule-876"><a name="876"></a>
+                            <div id="dnn_ctr876_ContentPane">
+                                <!-- Start_Module_876 -->
+                                <div id="dnn_ctr876_ModuleContent" class="DNNModuleContent ModTNHtmlC">
+
+                                    <span id="dnn_ctr876_Main_lblMessage" style="clear: both;"></span>
+
+                                </div>
+                                <!-- End_Module_876 -->
+                            </div>
+                            <div style="clear:both;"></div>
+                        </div>
+                    </div>
+                    <div class="clear">
+                    </div>
+                    <div id="dnn_Detail_Left" class="TNDetailLeft DNNEmptyPane">
+                    </div>
+                    <div id="dnn_Detail_Right" class="TNDetailRight DNNEmptyPane">
+                    </div>
+                    <div class="clear">
+                    </div>
+                    <div id="dnn_VideoLeft" class="videoleft DNNEmptyPane">
+                    </div>
+                    <div id="dnn_VideoRight" class="videoright DNNEmptyPane">
+                    </div>
+                    <div class="clear">
+                    </div>
+                    <div id="dnn_VideoHomeTop" class="TNvideotop DNNEmptyPane">
+                    </div>
+                    <div class="clear">
+                    </div>
+                    <div id="dnn_Video_Left" class="TNVdieoleft DNNEmptyPane">
+                    </div>
+                    <div id="dnn_Video_Center" class="TNVideocenter DNNEmptyPane">
+                    </div>
+                    <div id="dnn_Video_Right" class="TNVideoright DNNEmptyPane">
+                    </div>
+                    <div class="clear">
+                    </div>
+                    <div id="dnn_Bottom" class="TNContent">
+                        <div class="DnnModule DnnModule-TNHtml DnnModule-873"><a name="873"></a>
+                            <div id="dnn_ctr873_ContentPane">
+                                <!-- Start_Module_873 -->
+                                <div id="dnn_ctr873_ModuleContent" class="DNNModuleContent ModTNHtmlC">
+                                    <p style="text-align: left;"><img
+                                            src="./images/banner 1.1.jpg"
+                                            style="width: 960px; height: 139px;"></p>
+
+                                    <span id="dnn_ctr873_Main_lblMessage" style="clear: both;"></span>
+
+                                </div>
+                                <!-- End_Module_873 -->
+                            </div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="DnnModule DnnModule-TNHtml DnnModule-837"><a name="837"></a>
+                            <div id="dnn_ctr837_ContentPane">
+                                <!-- Start_Module_837 -->
+                                <div id="dnn_ctr837_ModuleContent" class="DNNModuleContent ModTNHtmlC">
+                                    <div class="tnalbum_gwrap">
+                                        <div class="xcate">
+                                            <div class="xparent">
+                                                <div class="xlink">
+                                                    <a tabindex="0"><span>Nhà Tài trợ</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div style="clear:both"></div>
+                                        <div id="amazon_scroller3" class="amazon_scroller">
+                                            <div class="amazon_scroller_mask">
+                                                <ul>
+                                                    <li><a tabindex="0" href="http://www.aia.com.vn/vi/index.html"
+                                                            target="_blank"><img src="./images/AIA.png"
+                                                                kasperskylab_antibanner="on"></a></li>
+                                                    <li><a tabindex="0" href="http://www.baoviet.com.vn/"
+                                                            target="_blank"><img
+                                                                src="./images/Logo%20BV%20Life-fileView.png"
+                                                                kasperskylab_antibanner="on"></a></li>
+                                                    <li><a href="http://www.fpt.vn/" tabindex="0" target="_blank"><img
+                                                                src="./images/fpt.png"
+                                                                kasperskylab_antibanner="on"></a></li>
+                                                    <li><a href="http://www.phumyhung.com.vn" tabindex="0"
+                                                            target="_blank"><img src="./images/phumyhung.png"
+                                                                kasperskylab_antibanner="on"></a></li>
+                                                    <li><a href="http://www.vietinbank.vn" tabindex="0"
+                                                            target="_blank"><img src="./images/viettin.png"
+                                                                kasperskylab_antibanner="on"></a></li>
+                                                    <li><a href="http://www.vuoncaovietnam.com/" tabindex="0"
+                                                            target="_blank"><img src="./images/vuoncao.png"
+                                                                kasperskylab_antibanner="on"></a></li>
+                                                    <li><a href="http://www.msbs.com.vn" tabindex="0"
+                                                            target="_blank"><img src="./images/mari.png"
+                                                                kasperskylab_antibanner="on"></a></li>
+                                                    <li><a href="http://www.vietcombank.com.vn" tabindex="0"
+                                                            target="_blank"><img src="./images/vietcom.png"
+                                                                kasperskylab_antibanner="on"></a></li>
+                                                    <li><a href="https://www.vinamilk.com.vn/" tabindex="0"
+                                                            target="_blank"><img src="./images/VINAMILK.png"
+                                                                kasperskylab_antibanner="on"></a></li>
+                                                    <li><a href="http://www.bidv.com.vn" tabindex="0"
+                                                            target="_blank"><img src="./images/bidv.png"
+                                                                kasperskylab_antibanner="on"></a></li>
+                                                    <li><a href="http://www.ugetherclothes.com/" tabindex="0"
+                                                            target="_blank"><img src="./images/us-logo.jpg"
+                                                                kasperskylab_antibanner="on"></a></li>
+                                                    <li><a href="https://www.pnj.com.vn/" tabindex="0"
+                                                            target="_blank"><img src="./images/PNJ1.jpg"
+                                                                kasperskylab_antibanner="on"></a></li>
+                                                    <li><a href="https://www.generali-life.com.vn/" tabindex="0"
+                                                            target="_blank"><img src="./images/logogen.png"
+                                                                kasperskylab_antibanner="on"></a></li>
+                                                    <br>
+                                                </ul>
+
+                                            </div>
+                                            <ul class="amazon_scroller_nav">
+                                                <li></li>
+                                                <li></li>
+                                            </ul>
+                                            <div style="clear: both;"></div>
+                                        </div>
+                                        <div style="clear: both;"></div>
+                                    </div>
+
+                                    <span id="dnn_ctr837_Main_lblMessage" style="clear: both;"></span>
+
+                                </div>
+                                <!-- End_Module_837 -->
+                            </div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="DnnModule DnnModule-TNHtml DnnModule-875"><a name="875"></a>
+                            <div id="dnn_ctr875_ContentPane">
+                                <!-- Start_Module_875 -->
+                                <div id="dnn_ctr875_ModuleContent" class="DNNModuleContent ModTNHtmlC">
+                                    <p style="text-align: center;">&nbsp;</p>
+                                    <p style="text-align: center;"></p>
+                                    <p style="text-align: center;">&nbsp;</p>
+                                    <p style="text-align: center;">&nbsp;</p>
+
+                                    <span id="dnn_ctr875_Main_lblMessage" style="clear: both;"></span>
+
+                                </div>
+                                <!-- End_Module_875 -->
+                            </div>
+                            <div style="clear:both;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <%-include("./footer")%>
+        <div id="scroll-top">
+            <a href="#top" tabindex="0">
+                <div class="GotoTop">
+                    Scroll</div>
+            </a>
+        </div>
+        <div id="dnn_Contentpane" class="DNNEmptyPane">
+        </div>
+        <script type="text/javascript">
+            function tninit() {
+                jQuery(".smartlistnoheight").each(function () {
+                    var me = jQuery(this);
+                    me.customScroll();
+                });
+                tndate(".dt");
+                jQuery(".dt").mask('99/99/9999');
+                jQuery('img[src=]').attr('src', 'abc.jpg');
+                jQuery('a img.ximg').error(function () {
+                    jQuery(this).parent().hide();
+                });
+
+                jQuery('.imgnews').each(function () {
+                    var me = jQuery(this);
+                    me.find('img').error(function () {
+                        me.hide();
+                    });
+                    var mheight = me.height();
+                    var mwidth = me.width();
+                    var mimg = me.find('img:first');
+                    if (mimg.height() < mheight) {
+                        mimg.css("width", "auto");
+                        mimg.css("height", mheight);
+                    }
+                });
+            }
+        </script>
+        <script type="text/javascript">
+            jQuery(document).ready(function () {
+                jQuery("#scroll-top").hide();
+                jQuery(function () {
+                    jQuery(window).scroll(function () {
+                        if (jQuery(this).scrollTop() > 400) {
+                            jQuery('#scroll-top').fadeIn();
+                        } else {
+                            jQuery('#scroll-top').fadeOut();
+                        }
+                    });
+                    jQuery('#scroll-top a').click(function () {
+                        jQuery('body,html').animate({
+                            scrollTop: 0
+                        }, 1000);
+                        return false;
+                    });
+                });
+            });
+        </script>
+        <script language="javascript" type="text/javascript">
+            $(function () {
+                $("#amazon_scroller3").amazon_scroller({
+                    scroller_title_show: 'enable',
+                    scroller_time_interval: '3000',
+                    scroller_window_background_color: "none",
+                    scroller_window_padding: '0',
+                    scroller_border: "1px solid #c8c8c8",
+                    scroller_images_width: '140',
+                    scroller_images_height: '100',
+                    scroller_title_size: '0',
+                    scroller_title_color: '#0c6797',
+                    scroller_show_count: '6',
+                    directory: 'images'
+                });
+            });
+        </script>
+
+        <input name="ScrollTop" type="hidden" id="ScrollTop" />
+        <input name="__dnnVariable" type="hidden" id="__dnnVariable" autocomplete="off"
+            value="`{`__scdoff`:`1`,`sf_siteRoot`:`/`,`sf_tabId`:`57`}" />
+
+
+        <!-- <script type="text/javascript" src="./js/initWidgets.js"></script>
+        <script type="text/javascript">
+            //<![CDATA[
+            Sys.Application.add_init(function() {
+                $create(Sys.UI._UpdateProgress, {
+                    "associatedUpdatePanelId": "dnn_ctr752_Main_UserTaiLieuList_up",
+                    "displayAfter": 500,
+                    "dynamicLayout": true
+                }, null, null, $get("dnn_ctr752_Main_UserTaiLieuList_UpdateProgress1"));
+            });
+            //]]>
+        </script> -->
+    </form>
+
+
+</body>
+
+</html>

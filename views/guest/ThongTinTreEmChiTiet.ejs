@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head id="Head">
+    <%-include("./header")%>
+</head>
+
+<body id="Body">
+    <link rel="stylesheet" href="/stylesheets/ck-style.css" type="text/css">
+    <script src="/js/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="/js/jquery-migrate.min.js" type="text/javascript"></script>
+    <link href="/stylesheets/menucss.css" rel="stylesheet" type="text/css">
+    <link href="/stylesheets/news.css" rel="stylesheet" type="text/css">
+    <link href="/stylesheets/common.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" media="screen">
+
+    <%-include("./menu_tttreem")%>
+    <div class="fmcenter">
+        <div class="TNContent">
+            <div id="dnn_Top" class="DNNEmptyPane">
+            </div>
+            <div class="clear">
+            </div>
+            <div class="TNMain">
+                <div id="dnn_Top_1" class="TNTop1 DNNEmptyPane">
+                </div>
+                <div id="dnn_Top_2" class="TNTop2 DNNEmptyPane">
+                </div>
+                <div id="dnn_Top_3" class="TNTop3 DNNEmptyPane">
+                </div>
+                <div class="clear">
+                </div>
+                <div id="dnn_Middle_1" class="TNMiddle1 DNNEmptyPane">
+                </div>
+                <div id="dnn_Middle_2" class="TNMiddle2 DNNEmptyPane">
+                </div>
+                <div class="clear">
+                </div>
+                <div id="dnn_Detail_Left" class="TNDetailLeft">
+                    <div class="DnnModule DnnModule-TNCategorySolution DnnModule-538"><a name="538"></a>
+                        <div id="dnn_ctr538_ContentPane">
+                            <!-- Start_Module_538 -->
+                            <div id="dnn_ctr538_ModuleContent" class="DNNModuleContent ModTNCategorySolutionC">
+                                <div style="clear:both;"></div>
+                                <div class="header_danhmuc">
+                                    <div class="hearder_tab_home">
+                                        <a href="/"></a>
+                                    </div>
+                                    <div class="header_Shape"></div>
+                                    <div class="hearder_tab_level1"><a
+                                            href="/tin-tuc-su-kien">Tin tức - Sự kiện</a>
+                                    </div>
+                                    <div class="header_warp_right"></div>
+                                </div>
+                                <div style="clear:both;"></div>
+                                <div style="clear:both;"></div>
+                                <span id="dnn_ctr538_Main_lblMessage" style="clear:both;"></span>
+
+
+                            </div><!-- End_Module_538 -->
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div class="DnnModule DnnModule-TNNewsSolution DnnModule-519"><a name="519"></a>
+                        <div id="dnn_ctr519_ContentPane">
+                            <!-- Start_Module_519 -->
+                            <div id="dnn_ctr519_ModuleContent" class="DNNModuleContent ModTNNewsSolutionC">
+                                <div class="tnnddemo_wrap">
+                                    <div class="newdetailscontent">
+                                        <% if (imagesrc !== '') { %>
+                                        <img id="dnn_ctr519_Main_UserNewsDetail__Image" title="<%= data.name %>"
+                                            class="ximgs" src="<%= imagesrc %>" alt="<%= data.name %>">
+                                        <% } %>
+                                        <div class="xtext">
+                                            <h1>
+                                                <%= data.name %>
+                                            </h1>
+                                            <div style="margin: 5px 0;" class="xdate">
+                                                <span id="dnn_ctr519_Main_UserNewsDetail_Label2">Cập nhật:</span>
+                                                <%= moment(data.createDate).format('hh:mm DD/MM/YYYY') %>
+                                            </div>
+                                        </div>
+                                        <p class="xsubject" style="word-break: break-word">
+                                            <%= data.address %>
+                                        </p>
+                                    </div>
+                                    <div class="xcontents">
+                                        <div class="ck-content">
+                                            <%- data.disadvantagedContent %>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <script type="text/javascript">
+                                    jQuery(document).ready(function () {
+
+                                        // hide #gototop first
+                                        // jQuery("#gototop").hide();
+                                        // fade in #gototop
+                                        jQuery(function () {
+                                            jQuery(window).scroll(function () {
+                                                if (jQuery(this).scrollTop() > 100) {
+                                                    jQuery('#gototop').fadeIn();
+                                                } else {
+                                                    jQuery('#gototop').fadeOut();
+                                                }
+                                            });
+
+                                            // scroll body to 0px on click
+                                            jQuery('#gototop').click(function () {
+                                                jQuery('body,html').animate({
+                                                    scrollTop: 0
+                                                }, 800);
+                                                return false;
+                                            });
+                                        });
+                                    });
+                                </script>
+
+                                <script type="text/javascript">
+
+                                    function ReplaceUrlWithoutReloading(urlserver, urlclient) {
+                                        //window.history.pushState({ id: 35 }, 'Viewing item #35', '/item/35');
+                                        //window.history.pushState({ id: 1 }, urlclient, urlserver);
+                                        window.history.replaceState({ id: 1 }, urlclient, urlserver);
+                                    }
+                                </script>
+
+                                <script type="text/javascript" language="javascript">
+
+                                    function startslide() {
+                                        var speed = 5000;
+                                        var run = setInterval('rotate()', speed);
+                                        var item_width = jQuery('#slides li').outerWidth();
+                                        var left_value = item_width * (-1);
+                                        jQuery('#slides li:first').before(jQuery('#slides li:last'));
+                                        jQuery('#slides ul').css({ 'left': left_value });
+                                        jQuery('#prev').click(function () {
+                                            var left_indent = parseInt(jQuery('#slides ul').css('left')) + item_width;
+                                            jQuery('#slides ul:not(:animated)').animate({ 'left': left_indent }, 200, function () {
+                                                jQuery('#slides li:first').before(jQuery('#slides li:last'));
+                                                jQuery('#slides ul').css({ 'left': left_value });
+
+                                            });
+                                            return false;
+                                        });
+                                        jQuery('#next').click(function () {
+                                            var left_indent = parseInt(jQuery('#slides ul').css('left')) - item_width;
+                                            jQuery('#slides ul:not(:animated)').animate({ 'left': left_indent }, 200, function () {
+                                                jQuery('#slides li:last').after(jQuery('#slides li:first'));
+                                                jQuery('#slides ul').css({ 'left': left_value });
+                                            });
+                                            return false;
+                                        });
+                                        jQuery('#slides').hover(
+                                            function () {
+                                                clearInterval(run);
+                                            },
+                                            function () {
+                                                run = setInterval('rotate()', speed);
+                                            }
+                                        );
+                                    }
+                                    function rotate() {
+                                        jQuery('#next').click();
+                                    }
+                                </script>
+
+                            </div><!-- End_Module_867 -->
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div class="DnnModule DnnModule-TNNewsSolution DnnModule-841"><a name="841"></a>
+                        <div id="dnn_ctr841_ContentPane">
+                            <!-- Start_Module_841 -->
+                            <div id="dnn_ctr841_ModuleContent" class="DNNModuleContent ModTNNewsSolutionC">
+                                <style type="text/css">
+                                </style>
+                            </div><!-- End_Module_841 -->
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div class="DnnModule DnnModule-TNNewsSolution DnnModule-558"><a name="558"></a>
+                        <div id="dnn_ctr558_ContentPane">
+                            <!-- Start_Module_558 -->
+                            <div id="dnn_ctr558_ModuleContent" class="DNNModuleContent ModTNNewsSolutionC">
+
+                                <div class="tnbnodemo_wrap mid558">
+                                    <div class="mtitle">
+                                        Các tin khác
+                                    </div>
+                                    <div class="xright"></div>
+                                    <div style="clear:both;"></div>
+                                    <div class="newsarea">
+                                        <div class="listnews">
+                                            <% for(var i = 0; i < relation.length; i++){ %>
+                                            <span class="itemx">
+                                                <a class="xlink" href="/thong-tin-tre-em/<%= relation[i]._id %>"
+                                                    title="<%= relation[i].name %>">
+                                                    <%= relation[i].name %>
+                                                </a>
+                                                -
+                                                <span
+                                                    class="xdate"><%= moment(relation[i].createDate).format('hh:mm DD/MM/YYYY') %></span>
+                                            </span>
+                                            <% } %>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End_Module_558 -->
+                        </div>
+                    </div>
+                    <div class="DnnModule DnnModule-TNHtml DnnModule-562"><a name="562"></a>
+                        <div id="dnn_ctr562_ContentPane">
+                            <!-- Start_Module_562 -->
+                            <div id="dnn_ctr562_ModuleContent" class="DNNModuleContent ModTNHtmlC">
+                                <a
+                                    href="/"><img
+                                        src="/images/ao-am3.png"></a><br>
+
+                                <span id="dnn_ctr562_Main_lblMessage" style="clear: both;"></span>
+
+                            </div><!-- End_Module_562 -->
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div class="DnnModule DnnModule-TNComments DnnModule-539"><a name="539"></a>
+                        <div id="dnn_ctr539_ContentPane">
+                            <!-- Start_Module_539 -->
+                            <div id="dnn_ctr539_ModuleContent" class="DNNModuleContent ModTNCommentsC">
+
+                                <style type="text/css">
+                                    .PagingContainer ul {
+                                        margin: 0 0 0 25px;
+                                    }
+
+                                    .PagingContainer {
+                                        margin-right: 0;
+                                        margin-top: 5px
+                                    }
+
+                                    .PagingContainer li a {
+                                        text-decoration: none;
+                                    }
+
+                                    @media screen and (-webkit-min-device-pixel-ratio:0) {
+                                        .PagingContainer {
+                                            margin-right: 5px;
+                                        }
+                                    }
+
+                                    .reBottomZone,
+                                    .reEditorModesCell,
+                                    .reResizeCell,
+                                    .reWrapper_corner,
+                                    .reWrapper_center,
+                                    .pagedes {
+                                        display: none !important;
+                                    }
+
+                                    .cmd_duyetbai {
+                                        margin-right: 20px;
+                                    }
+                                </style>
+                                <div id="dnn_ctr539_Main_UserComments_up">
+
+                                    <div id="dnn_ctr539_Main_UserComments_UpdateProgress1" style="display:none;"
+                                        role="status" aria-hidden="true">
+
+                                        <div class="ui-widget-overlay" style="text-align: center; position: fixed; top: 0px;
+                    left: 0px; width: 1349px; height: 747px; z-index: 1001;">
+                                            <img alt="Dang tai..." style="position: fixed; top: 250px; left: 50%;"
+                                                src="/images/progressbar.gif">
+                                        </div>
+
+                                    </div>
+
+                                    <input type="hidden" name="dnn$ctr539$Main$UserComments$_CurrentPage"
+                                        id="dnn_ctr539_Main_UserComments__CurrentPage" value="0">
+                                    <input type="hidden" name="dnn$ctr539$Main$UserComments$hdid"
+                                        id="dnn_ctr539_Main_UserComments_hdid">
+                                    <input type="hidden" name="dnn$ctr539$Main$UserComments$hdids"
+                                        id="dnn_ctr539_Main_UserComments_hdids">
+                                    <input type="hidden" name="dnn$ctr539$Main$UserComments$idkhoacomment"
+                                        id="dnn_ctr539_Main_UserComments_idkhoacomment">
+
+                                </div>
+                                <script type="text/javascript">
+
+                                    function baocaovipham(CommentId) {
+                                        jQuery('#' + 'dnn_ctr539_Main_UserComments_idBaoCaoComment').val(CommentId);
+
+                                        fancyConfirm("Bạn có chắc chắn muốn báo cáo vi phạm bài viết này?", function (result) {
+                                            if (result == true) {
+                                                eval(jQuery("#" + 'dnn_ctr539_Main_UserComments_lbtBaoCaoViPham').attr('href'));
+                                            }
+                                        });
+                                    }
+
+                                    function confirm_KhoaComment(mesage) {
+                                        fancyConfirm(mesage, function (result) {
+                                            if (result == true) {
+                                                jQuery("#" + 'dnn_ctr539_Main_UserComments_imgbtnKhoaComment').click();
+                                            }
+                                        });
+                                    }
+                                    function KhoaComment(id) {
+                                        jQuery('#' + 'dnn_ctr539_Main_UserComments_idkhoacomment').val(id);
+                                        confirm_KhoaComment('Bạn có chắc chắn KHÓA comment này?');
+                                    }
+
+                                </script>
+
+                                <span id="dnn_ctr539_Main_lblMessage" style="clear:both;"></span>
+
+                            </div><!-- End_Module_539 -->
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                </div>
+                <%-include("./Detail_Right")%>
+                <div class="clear">
+                </div>
+                <div id="dnn_VideoLeft" class="videoleft DNNEmptyPane">
+                </div>
+                <div id="dnn_VideoRight" class="videoright DNNEmptyPane">
+                </div>
+                <div class="clear">
+                </div>
+                <div id="dnn_VideoHomeTop" class="TNvideotop DNNEmptyPane">
+                </div>
+                <div class="clear">
+                </div>
+                <div id="dnn_Video_Left" class="TNVdieoleft DNNEmptyPane">
+                </div>
+                <div id="dnn_Video_Center" class="TNVideocenter DNNEmptyPane">
+                </div>
+                <div id="dnn_Video_Right" class="TNVideoright DNNEmptyPane">
+                </div>
+                <div class="clear">
+                </div>
+                <div id="dnn_Bottom" class="TNContent DNNEmptyPane">
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+    </div>
+    <%-include("./footer")%>
+    <div id="scroll-top" style="display: block;">
+        <a href="/"
+            tabindex="0">
+            <div class="GotoTop">
+                Scroll</div>
+        </a>
+    </div>
+    <div id="dnn_Contentpane" class="DNNEmptyPane">
+    </div>
+    <script type="text/javascript">
+        function tninit() {
+            jQuery(".smartlistnoheight").each(function () {
+                var me = jQuery(this);
+                me.customScroll();
+            });
+            tndate(".dt");
+            jQuery(".dt").mask('99/99/9999');
+            jQuery('img[src=]').attr('src', 'abc.jpg');
+            jQuery('a img.ximg').error(function () {
+                jQuery(this).parent().hide();
+            });
+
+            jQuery('.imgnews').each(function () {
+                var me = jQuery(this);
+                me.find('img').error(function () {
+                    me.hide();
+                });
+                var mheight = me.height();
+                var mwidth = me.width();
+                var mimg = me.find('img:first');
+                if (mimg.height() < mheight) {
+                    mimg.css("width", "auto");
+                    mimg.css("height", mheight);
+                }
+            });
+        }
+    </script>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            jQuery("#scroll-top").hide();
+            jQuery(function () {
+                jQuery(window).scroll(function () {
+                    if (jQuery(this).scrollTop() > 400) {
+                        jQuery('#scroll-top').fadeIn();
+                    } else {
+                        jQuery('#scroll-top').fadeOut();
+                    }
+                });
+                jQuery('#scroll-top a').click(function () {
+                    jQuery('body,html').animate({
+                        scrollTop: 0
+                    }, 1000);
+                    return false;
+                });
+            });
+        });
+    </script>
+    <input name="ScrollTop" type="hidden" id="ScrollTop" value="2279">
+    <input name="__dnnVariable" type="hidden" id="__dnnVariable" autocomplete="off"
+        value="`{`__scdoff`:`1`,`sf_siteRoot`:`/`,`sf_tabId`:`114`}">
+
+    <div id="fancybox-tmp"></div>
+    <div id="fancybox-loading">
+        <div></div>
+    </div>
+    <div id="fancybox-overlay"></div>
+    <div id="fancybox-wrap">
+        <div id="fancybox-outer">
+            <div class="fancybox-bg" id="fancybox-bg-n"></div>
+            <div class="fancybox-bg" id="fancybox-bg-ne"></div>
+            <div class="fancybox-bg" id="fancybox-bg-e"></div>
+            <div class="fancybox-bg" id="fancybox-bg-se"></div>
+            <div class="fancybox-bg" id="fancybox-bg-s"></div>
+            <div class="fancybox-bg" id="fancybox-bg-sw"></div>
+            <div class="fancybox-bg" id="fancybox-bg-w"></div>
+            <div class="fancybox-bg" id="fancybox-bg-nw"></div>
+            <div id="fancybox-content"></div><a id="fancybox-close"></a>
+            <div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico"
+                    id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico"
+                    id="fancybox-right-ico"></span></a>
+        </div>
+    </div>
+    <div id="eJOY__extension_root" style="all: unset;"></div>
+</body>
+
+</html>

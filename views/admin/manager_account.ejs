@@ -1,0 +1,382 @@
+<% include header_admin %>
+
+<body class="">
+  <div class="wrapper ">
+    <% include sidebar_admin%>
+    <div class="main-panel nain-admin-02" id="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <a class="navbar-brand" href="#pablo">Quản lý tài khoản</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end">
+
+            <form id="submitaccount" action="/admin/quan-ly-tai-khoan" method="GET" class="navbar-form">
+              <div class="input-group no-border">
+                <input type="text" value="" name="search" class="form-control" required placeholder="Search..."
+                  id="eventSearchTextBoxAccount">
+                <script>
+                  var event = document.getElementById("eventSearchTextBoxAccount")
+                  event.addEventListener("keydown", function (e) {
+                    if (e.keyCode === 13) {
+                      $('#submitaccount').submit();
+                    }
+                  });
+
+                </script>
+
+
+                <button type="submit" class="btn btn-white btn-round btn-just-icon">
+                  <i class="material-icons">search</i>
+                  <div class="ripple-container"></div>
+                </button>
+              </div>
+            </form>
+
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">
+                  <i class="material-icons">person</i>
+                  <p class="d-lg-none d-md-block">
+                    Account
+                  </p>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
+                  <a class="dropdown-item" id="logout">Log out</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      <div class="content">
+
+
+
+        <!--Content Modal addAccount -->
+        <button type="button" class="btn btn btn-rectangle btn-warning" data-toggle="modal"
+          data-target="#addAccountModal" data-original-title="" title="">
+          <a class="badge" style="font-size: inherit;">Thêm tài khoản</a>
+        </button>
+        <!-- Content Modal  addAccount  -->
+        <div class="modal fade" id="addAccountModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document" style="max-width: 50%;">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="addAccountModal">Quản lý tài khoản</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body text-left">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="card">
+                      <div class="card-header card-header-primary">
+                        <h4 class="card-title">Chỉnh sửa thông tin</h4>
+                      </div>
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group bmd-form-group">
+                              <label class="bmd-label-floating">Username</label>
+                              <input type="text" class="form-control" id="addAccountUsername">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group bmd-form-group">
+                              <label class="bmd-label-floating">Password</label>
+                              <input type="password" class="form-control" id="addAccountPassword">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group bmd-form-group">
+                              <label class="bmd-label-floating">Email address</label>
+                              <input type="email" class="form-control" id="addAccountEmailAddress">
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="form-group bmd-form-group">
+                              <label class="bmd-label-floating">Fist Name</label>
+                              <input type="text" class="form-control" id="addAccountFirstName">
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="form-group bmd-form-group">
+                              <label class="bmd-label-floating">Last Name</label>
+                              <input type="text" class="form-control" id="addAccountLastName">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group bmd-form-group">
+                              <label class="bmd-label-floating">Address</label>
+                              <input type="text" class="form-control" id="addAccountAddress">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group bmd-form-group">
+                              <label class="bmd-label-floating"">Phone</label>
+                                          <input type=" email" class="form-control" id="addAccountPhone">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="form-group bmd-form-group">
+                              <label class="bmd-label-floating" style="display: contents;">Roles</label>
+                              <select class="form-control" data-style="btn btn-link" id="addAccountRoles">
+                                <option value="admin_center" selected>Admin quản trị trung tâm</option>
+                                <option value="admin_system">Admin quản trị hệ thống</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                  style="padding: 12px 30px;">Hủy</button>
+                <button type="button" rel="tooltip" class="btn btn-primary" style="padding: 12px 30px;">
+                  <a href="#addAccount" onclick="addAccount()" style="color: aliceblue;"> Thêm</a>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="text-center">#</th>
+              <th class="text-center">Tài khoản</th>
+              <th class="text-center">Họ tên</th>
+              <th class="text-center">Email</th>
+              <th class="text-center">Số điện thoại</th>
+              <th class="text-center">Địa CHỉ</th>
+              <th class="text-center">Thao tác</th>
+            </tr>
+          </thead>
+          <tbody name='data'>
+            <% for(var i =0; i < table_account.length; i++){ %>
+            <tr>
+              <td class="text-center"> <%= i + 1 %></td>
+              <td class="text-center"> <%= table_account[i].username %></td>
+              <td class="text-center"> <%= table_account[i].firstName%> <%=table_account[i].lastName%></td>
+              <td class="text-center"> <%= table_account[i].email %></td>
+              <td class="text-center"> <%= table_account[i].numberPhone %></td>
+              <td class="text-center"> <%= table_account[i].address %></td>
+              <td class="td-actions text-center">
+                <button type="button" rel="tooltip" class="btn btn-success btn-round" data-toggle="modal"
+                  data-target="#editAccountModal<%=i%>" onclick="editAccount('Account<%=i%>')">
+                  <a class="badge-success material-icons">edit</a>
+                </button>
+                <div class="modal fade" id="editAccountModal<%=i%>" tabindex="-1" role="dialog"
+                  aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document" style="max-width: 50%;">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="editAccountModal<%=i%>">Quản lý tài khoản</h5>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">×</span>
+                        </button>
+                      </div>
+                      <div class="modal-body text-left">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="card">
+                              <div class="card-header card-header-primary">
+                                <h4 class="card-title">Chỉnh sửa thông tin</h4>
+                              </div>
+                              <div class="card-body">
+
+                                <div class="row">
+                                  <div class="col-md-5">
+                                    <div class="form-group bmd-form-group">
+                                      <label class="bmd-label-floating">Username(Không thể thay đổi)</label>
+                                      <input type="text" class="form-control" disabled />
+                                    </div>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <div class="form-group bmd-form-group">
+                                      <label class="bmd-label-floating">Phone</label>
+                                      <input type="text" class="form-control" id="updateAccount<%=i%>Phone" />
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <div class="form-group bmd-form-group">
+                                      <label class="bmd-label-floating">Email address</label>
+                                      <input type="email" class="form-control" id="updateAccount<%=i%>EmailAddress" />
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-6">
+                                    <div class="form-group bmd-form-group">
+                                      <label class="bmd-label-floating">Fist Name</label>
+                                      <input type="text" class="form-control" id="updateAccount<%=i%>FirstName" />
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <div class="form-group bmd-form-group">
+                                      <label class="bmd-label-floating">Last Name</label>
+                                      <input type="text" class="form-control" id="updateAccount<%=i%>LastName" />
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <div class="form-group bmd-form-group">
+                                      <label class="bmd-label-floating" style="display: contents;">Roles(Không thể
+                                        thay đổi)
+                                      </label>
+                                      <select class="form-control" data-style="btn btn-link"
+                                        id="updateAccount<%=i%>Roles" disabled>
+                                        <option value="admin_center" selected>Admin quản trị trung tâm</option>
+                                        <option value="admin_system">Admin quản trị hệ thống</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <div class="form-group bmd-form-group">
+                                      <label class="bmd-label-floating">Address</label>
+                                      <input type="text" class="form-control" id="updateAccount<%=i%>Address" />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                          style="padding: 12px 30px;">Đóng</button>
+                        <button type="button" class="btn btn-primary"
+                          onclick="UpdateAccount('<%= table_account[i].username %>')" style="padding: 12px 30px;">
+                          <a href="#update-<%= table_account[i].username%>" value="account<%=i%>"
+                            style="color: aliceblue">Cập nhật</a>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" rel="tooltip" class="btn btn-danger btn-round" data-toggle="modal"
+                  data-target="#deleteAccountModal<%=i%>">
+                  <a class="badge-danger material-icons">delete</a>
+                </button>
+                <div class="modal fade" id="deleteAccountModal<%=i%>" tabindex="-1" role="dialog"
+                  aria-labelledby="deleteAccountModal" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="deleteAccountModal<%=i%>">Bạn có chắc chắn muốn xóa ?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <table class="table">
+                          <tr>
+                            <td class="text-left">Tài khoản : <%= table_account[i].username %></td>
+                          </tr>
+
+
+                          <tr>
+                            <td class="text-left">Họ và tên : <%= table_account[i].firstName%>
+                              <%=table_account[i].lastName%>> </td>
+                          </tr>
+                          <tr>
+                            <td class="text-left">Địa chỉ liên hệ : <%= table_account[i].address %></td>
+                          </tr>
+                        </table>
+
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                          style="padding: 12px 30px;">Đóng
+                        </button>
+
+                        <button type="button" class="btn btn-primary" style="padding: 12px 30px;"
+                          onclick="deleteAccount('<%= table_account[i].username %>')">
+                          <a href="#<%= table_account[i].username %>" style="color: aliceblue">Xóa</a>
+                        </button>
+
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+        <nav aria-label="...">
+          <div>
+
+            <% if (totalPages > 0) { %>
+            <ul class="pagination justify-content-left" style="float: left;">
+              <% if (currentPage == 1) { %>
+              <li class=" page-item disabled"><a class="page-link">First</a></li>
+              <% } else { %>
+              <li class="page-item"><a class="page-link" href="/admin/quan-ly-tai-khoan?page=1<%= search %>">First</a>
+              </li>
+              <% } %>
+              <% var i = (Number(currentPage) > 5 ? Number(currentPage) - 4 : 1) %>
+              <% if (i !== 1) { %>
+              <li class=" page-item disabled"><a class="page-link">...</a></li>
+              <% } %>
+              <% for (; i <= (Number(currentPage) + 4) && i <= totalPages; i++) { %>
+              <% if (i == currentPage) { %>
+              <li class=" page-item active"><a class="page-link"><%= i %></a></li>
+              <% } else { %>
+              <li class="page-item"><a class="page-link"
+                  href="/admin/quan-ly-tai-khoan?page=<%= i %><%= search %>"><%= i %></a></li>
+              <% } %>
+              <% if (i == Number(currentPage) + 4 && i < totalPages) { %>
+              <li class=" page-item disabled"><a class="page-link">...</a></li>
+              <% } %>
+              <% } %>
+              <% if (currentPage == totalPages) { %>
+              <li class=" page-item disabled"><a class="page-link">Last</a></li>
+              <% } else { %>
+              <li class="page-item"><a class="page-link"
+                  href="/admin/quan-ly-tai-khoan?page=<%= totalPages %><%= search %>">Last</a></li>
+              <% } %>
+            </ul>
+            <% } %>
+
+            </ul>
+          </div>
+          <div style="float: right;margin-right: 4.5%;">
+
+            <span class="page-link">Trang <%=currentPage %> trên tổng số <%=totalPages %> trang</span>
+          </div>
+
+
+        </nav>
+      </div>
+
+      <%include footer_admin%>

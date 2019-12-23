@@ -1,0 +1,312 @@
+<div id="dnn_Detail_Right" class="TNDetailRight">
+    <div class="DnnModule DnnModule-TNNewsSolution DnnModule-547"><a name="547"></a>
+        <div id="dnn_ctr547_ContentPane">
+            <!-- Start_Module_547 -->
+            <div id="dnn_ctr547_ModuleContent" class="DNNModuleContent ModTNNewsSolutionC">
+                <div class="tnbvdemo_wrap mid547">
+                    <div class="xcaption">
+                        <div class="xtext">
+                            <a href="#">
+                                Video
+                            </a>
+                        </div>
+                    </div>
+                    <div style="clear:both"></div>
+                    <div id="player" class="xboxvideo"><embed height="180" width="250"
+                            flashvars="file=/Portals/0/VIDEO/2019_6/ps_thang_hanh_dong_vi_tre_em.flv&amp;height=180&amp;width=250&amp;image=/DesktopModules/TNNewsSolution/swfplayer/logo.jpg&amp;autostart=false"
+                            allowscriptaccess="always" wmode="transparent" allowfullscreen="true"
+                            quality="high" bgcolor="#000000" name="movie_player" id="playerID"
+                            src="/DesktopModules/TNNewsSolution/swfplayer/player.swf"
+                            type="application/x-shockwave-flash"></div>
+                    <div class="xvideotitle">Phóng sự Tháng Hành động vì trẻ em và Giải đá bóng vô
+                        địch Quốc gia cho trẻ em có HCĐB năm 2019</div>
+                    <div class="videoarea">
+                        <img class="arrow" onclick="loadVideo(1);" src="/images/varrow_left.png"
+                            style="float: left;left: 3px;">
+
+                        <img title="Phóng sự Tháng Hành động vì trẻ em và Giải đá bóng vô địch Quốc gia cho trẻ em có HCĐB năm 2019"
+                            onclick="show_video(this);"
+                            mediaurl="/Portals/0/VIDEO/2019_6/ps_thang_hanh_dong_vi_tre_em.flv"
+                            class="img xshow first selected" src="/images/15.JPG">
+
+                        <img title="Trailer giới thiệu chương trình Mùa xuân cho em lần thứ 12 năm 2019"
+                            onclick="show_video(this);"
+                            mediaurl="/Portals/0/VIDEO/2019_1/trailer_mua_xuan_xuat_lai.flv"
+                            class="img xshow" src="/images/img_7909.JPG">
+
+                        <img title="Chương trình Ánh mắt trẻ thơ với chủ đề " cận="" thị="" thời=""
+                            công="" nghệ="" đồng="" hành="" cùng="" con="" bảo="" vê="" mắt""=""
+                            onclick="show_video(this);"
+                            mediaurl="/Portals/0/VIDEO/2018_11/anh_mat_tre_tho_20183.flv"
+                            class="img xshow" src="/images/img_1385.JPG">
+
+                        <img title="Phóng sự khánh thành công trình xây dựng Trường PTDT bán trú TH và THCS xã Xín Chải"
+                            onclick="show_video(this);"
+                            mediaurl="/Portals/0/VIDEO/2017_8/phong_su_xin_chai_plv.flv"
+                            class="img xshow last" src="/images/img_3182.JPG">
+
+                        <img title="Phim tài liệu 25 năm xây dựng và phát triển của Quỹ Bảo trợ trẻ em tỉnh Điện Biên"
+                            onclick="show_video(this);"
+                            mediaurl="/Portals/0/VIDEO/2017_8/quy_bttevn_352017_update.flv"
+                            style="display:none;" class="img" src="/images/tang_8683.jpg">
+
+                        <img class="arrow" onclick="loadVideo(-1);" style="right: 0px;"
+                            src="/images/varrow_right.png">
+
+
+                    </div>
+
+                    <div style="clear: both; "></div>
+                </div>
+                <div style="clear: both;"></div>
+
+
+                <div style="clear: both;height:10px"></div>
+
+                <script type="text/javascript">
+                    var first_bood = true;
+                    jQuery(document).ready(function () {
+                        loadVideo(1);
+                        jQuery(".img").click(function () {
+                            var scop = jQuery(".mid" + '547');
+                            var me = jQuery(this);
+                            scop.find(".selected").removeClass("selected");
+                            me.addClass("selected");
+                        });
+                        jQuery(".img:first").click();
+                    });
+
+                    function loadVideo(seed) {
+                        var scop = jQuery(".mid" + '547');
+
+                        var x;
+                        if (seed == 1) {
+                            x = scop.find(".xshow:last");
+                            if (x.length > 0 && x.next(".img").length == 0) {
+                                return;
+                            }
+                        }
+                        else {
+                            x = scop.find(".xshow:first");
+                            if (x.length > 0 && x.prev(".img").length == 0) {
+                                return;
+                            }
+                        }
+
+                        scop.find(".xshow").attr("class", "img").hide();
+
+                        var limit = 4;
+                        if (x.length <= 0) {
+                            x = scop.find(".img:first");
+                            x.addClass("xshow").fadeIn();
+                            limit = limit - 1;
+                        }
+
+                        for (i = 0; i < limit; i++) {
+                            if (seed == 1)
+                                x = x.next(".img");
+                            else
+                                x = x.prev(".img");
+                            x.addClass("xshow").fadeIn(1500);
+                        }
+                        jQuery(".xshow:first").addClass("first");
+                        jQuery(".xshow:last").addClass("last");
+                    }
+
+                    function show_video(obj) {
+                        var scop = jQuery(".mid" + '547');
+                        var me = jQuery(obj);
+                        var embed_content = ""
+                        var mediaurl = me.attr("MediaUrl");
+                        scop.find(".xvideotitle").html(me.attr("title"));
+
+                        var ap = 1;
+                        if (first_bood == true) {
+                            ap = 0;
+                        }
+                        if (mediaurl.indexOf("youtube.com") >= 0)
+                            embed_content = '<iframe width="250" height="180" src="' + mediaurl + '?autoplay=' + ap + '&amp;loop=0&amp;rel=0" frameborder="0" allowfullscreen></iframe>'
+                        else {
+                            embed_content = "" +
+                                "<embed height='180' width='250' " +
+                                "flashvars='file=" + mediaurl +
+                                "&height=180" +
+                                "&width=250" +
+                                "&image=/DesktopModules/TNNewsSolution/swfplayer/logo.jpg" +
+                                //"&image=" + me.attr("src") +
+                                "&autostart=" + !first_bood +
+                                "' allowscriptaccess='always' " +
+                                "wmode='transparent' " +
+                                "allowfullscreen='true' " +
+                                "quality='high' " +
+                                "bgcolor='#000000' " +
+                                "name='movie_player' " +
+                                "id='playerID'  " +
+                                "src='/DesktopModules/TNNewsSolution/swfplayer/player.swf' " +
+                                "type='application/x-shockwave-flash'/>";
+                            if (!!document.createElement('video').canPlayType && mediaurl.indexOf(".mp4") > 0) {
+                                embed_content = "<video width='100%' controls>" +
+                                    "<source src='" + mediaurl + "' type='video/mp4'>" +
+                                    "</video>";
+                            }
+                        }
+                        if (first_bood)
+                            first_bood = !first_bood;
+                        jQuery("#player").html(embed_content);
+                        return false;
+                    }
+                </script>
+            </div><!-- End_Module_547 -->
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+    <div class="DnnModule DnnModule-TNHtml DnnModule-570"><a name="570"></a>
+        <div id="dnn_ctr570_ContentPane">
+            <!-- Start_Module_570 -->
+            <div id="dnn_ctr570_ModuleContent" class="DNNModuleContent ModTNHtmlC">
+                <style>
+                    .tnnewscate2_nochild .yhitem {
+                        padding: 10px 10px 5px 10px;
+                        background: #EDECEC;
+                        overflow: hidden;
+                    }
+
+                    .tnnewscate2_nochild .yhitem span {
+                        font: normal 13px/26px Open Sans Semibold;
+                        color: #0073b9;
+                        display: block
+                    }
+                </style>
+                <div class="tnnewscate2_nochild">
+                    <div class="xcate">
+                        <div class="xparent">
+                            <div class="xlink">
+                                <span>Tài khoản tiếp nhận</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear:both"></div>
+                    <div class="yhitem">
+                        <span>
+                            TK tiền Việt: XXX.X.XX.XXXXXXX<br>
+                            TK ngoại tệ: XXX.X.XX.XXXXXXX<br>
+                            Tại: Sở giao dịch ngân hàng<br>
+                            TMCP Ngoại thương Việt Nam<br>
+                        </span>
+                    </div>
+                </div>
+
+                <span id="dnn_ctr570_Main_lblMessage" style="clear: both;"></span>
+
+            </div><!-- End_Module_570 -->
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+    <div class="DnnModule DnnModule-TNHtml DnnModule-838"><a name="838"></a>
+        <div id="dnn_ctr838_ContentPane">
+            <!-- Start_Module_838 -->
+            <div id="dnn_ctr838_ModuleContent" class="DNNModuleContent ModTNHtmlC">
+                <style>
+                    .tnnewscate2_nochild .xhitem {
+                        padding: 10px 10px 5px 10px;
+                        background: #EDECEC;
+                        height: 115px;
+                        overflow: hidden;
+                    }
+
+                    .tnnewscate2_nochild .xhitem ul li {
+                        display: block;
+                        background: url(/images/newsimage/bullet.png) 0 13px no-repeat;
+                    }
+
+                    .tnnewscate2_nochild .xhitem ul li a {
+                        font: normal 13px/28px Open Sans Semibold;
+                        color: #0073b9;
+                        margin-left: 12px;
+                        display: block
+                    }
+
+                    .tnnewscate2_nochild .xhitem ul li a:hover {
+                        color: #666
+                    }
+                </style>
+                <div class="tnnewscate2_nochild">
+                    <div class="xcate">
+                        <div class="xparent">
+                            <div class="xlink">
+                                <span>Hỗ trợ thục hiện quyền trẻ em</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear:both"></div>
+                    <div class="xhitem">
+                        <ul>
+                            <li><a href="/tin-tuc-su-kien/quyen-song-con">Quyền sống
+                                    còn</a></li>
+                            <li><a href="/tin-tuc-su-kien/quyen-phat-trien">Quyền phát
+                                    triển</a></li>
+                            <li><a href="/tin-tuc-su-kien/quyen-bao-ve">Quyền bảo vệ</a>
+                            </li>
+                            <li><a href="/tin-tuc-su-kien/quyen-tham-gia">Quyền tham gia</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <span id="dnn_ctr838_Main_lblMessage" style="clear: both;"></span>
+
+            </div><!-- End_Module_838 -->
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+    <div class="DnnModule DnnModule-TNHtml DnnModule-849"><a name="849"></a>
+        <div id="dnn_ctr849_ContentPane">
+            <!-- Start_Module_849 -->
+            <div id="dnn_ctr849_ModuleContent" class="DNNModuleContent ModTNHtmlC">
+                <style>
+                    .tnnewscate2_nochild .xhitem {
+                        padding: 10px 10px 5px 10px;
+                        background: #EDECEC;
+                        height: 115px;
+                        overflow: hidden;
+                    }
+
+                    .tnnewscate2_nochild .xhitem ul li {
+                        display: block;
+                        background: url(/images/newsimage/bullet.png) 0 13px no-repeat;
+                    }
+
+                    .tnnewscate2_nochild .xhitem ul li a {
+                        font: normal 13px/28px Open Sans Semibold;
+                        color: #0073b9;
+                        margin-left: 12px;
+                        display: block
+                    }
+
+                    .tnnewscate2_nochild .xhitem ul li a:hover {
+                        color: #666
+                    }
+                </style>
+                <div class="tnnewscate2_nochild">
+                    <div class="xcate">
+                        <div class="xparent">
+                            <div class="xlink">
+                                <span>Bảng vàng tài trợ</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear:both"></div>
+                    <div class="xhitem">
+                        <ul>
+                            <li><a href="/nha-tai-tro">Bảng vàng tài
+                                    trợ</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <span id="dnn_ctr849_Main_lblMessage" style="clear: both;"></span>
+
+            </div><!-- End_Module_849 -->
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+</div>

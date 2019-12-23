@@ -1,0 +1,163 @@
+<% include ../header_admin %>
+
+
+<body class="">
+  <div class="wrapper ">
+    <% include ../sidebar_admin%>
+
+    <div class="main-panel nain-admin-06" id="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <a class="navbar-brand" href="#pablo">Quản lý hoàn cảnh khó khăn</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end">
+            <form action="/admin/quan-ly-hoan-canh-kho-khan" method="GET" class="navbar-form">
+              <div class="input-group no-border">
+                <input type="text" value="" name="search" class="form-control" required placeholder="Tìm kiếm theo tên...">
+                <button type="submit" class="btn btn-white btn-round btn-just-icon">
+                  <i class="material-icons">search</i>
+                  <div class="ripple-container"></div>
+                </button>
+              </div>
+            </form>
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">
+                  <i class="material-icons">person</i>
+                  <p class="d-lg-none d-md-block">
+                    Account
+                  </p>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
+                  <a class="dropdown-item" href="#">Log out</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      <div class="content">
+        <a href="/admin/them-hoan-canh-kho-khan" class="badge badge-success">+ Thêm hoàn cảnh khó khăn</a>
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="text-left">#</th>
+              <th class="text-left" style="width: 25%;">Tên</th>
+              <th class="text-left" style="width: 20%;">Địa chỉ</th>
+              <th class="text-left">Số trẻ em</th>
+              <th class="text-left">Ngày tạo</th>
+              <th class="text-left">Ngày chỉnh sửa</th>
+              <th class="text-left">Trạng thái</th>
+              <th class="text-center">Thao tác</th>
+            </tr>
+          </thead>
+          <tbody name='data'>
+            <% for(var i =0; i < data.length; i++){ %>
+            <tr>
+              <td class="text-left"><%= i + 1 %></td>
+              <td><%= data[i].name %></td>
+              <td class="td-actions text-left"><%= data[i].address %></td>
+              <td class="td-actions text-left"><%= data[i].numberChild %></td>
+              <td class="td-actions text-left"><%= moment(data[i].createDate).format('kk:mm MM/DD/YYYY') %></td>
+              <td class="td-actions text-left"><%= moment(data[i].modifiedDate).format('kk:mm MM/DD/YYYY') %></td>
+              <td class="td-actions text-left"><%= data[i].status %></td>
+              <td class="td-actions text-center">
+                <button type="button" rel="tooltip" class="btn btn-success btn-round">
+                  <a href="/admin/chinh-sua-hoan-canh-kho-khan/<%= data[i]._id %>"
+                    class="badge-success material-icons">edit</a>
+                </button>
+                <button type="button" rel="tooltip" class="btn btn-danger btn-round" data-toggle="modal"
+                  data-target="#deleteHCModal<%=i%>">
+                  <a class="badge-danger material-icons">delete</a>
+                </button>
+                <div class="modal fade" id="deleteHCModal<%=i%>" tabindex="-1" role="dialog"
+                  aria-labelledby="deleteHCModal" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="deleteHCModal<%=i%>">Bạn có chắc chắn muốn xóa ?</h5>
+                      </div>
+                      <div class="modal-body">
+                        <table class="table">
+                          <tr>
+                            <td class="text-left">Tên : <%= data[i].name %></td>
+                          </tr>
+
+
+                          <tr>
+                            <td class="text-left">Số trẻ em cần giúp đỡ : <%= data[i].numberChild%> </td>
+                          </tr>
+                          <tr>
+                            <td class="text-left">Địa chỉ liên hệ : <%= data[i].address %></td>
+                          </tr>
+                        </table>
+
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                          style="padding: 12px 30px;">Đóng
+                        </button>
+
+                        <button type="button" class="btn btn-primary" style="padding: 12px 30px;"
+                          onclick="delHC('<%= data[i]._id %>')">
+                          <a href="#<%= data[i]._id %>" data-dismiss="modal" style="color: aliceblue">Xóa</a>
+                        </button>
+
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+        <nav aria-label="...">
+          <% if (pages > 0) { %>
+          <ul class="pagination justify-content-center">
+            <% if (current == 1) { %>
+            <li class="page-item disabled"><a class="page-link">First</a></li>
+            <% } else { %>
+            <li><a class="page-link" href="/admin/quan-ly-hoan-canh-kho-khan/1<%= search %>">First</a></li>
+            <% } %>
+            <% var i = (Number(current) > 5 ? Number(current) - 4 : 1) %>
+            <% if (i !== 1) { %>
+            <li class="page-item disabled"><a>...</a></li>
+            <% } %>
+            <% for (; i <= (Number(current) + 4) && i <= pages; i++) { %>
+            <% if (i == current) { %>
+            <li class="page-item active"><span class="page-link">
+                <%= i %>
+                <span class="sr-only">(current)</span>
+                <% } else { %>
+            <li><a class="page-link" href="/admin/quan-ly-hoan-canh-kho-khan/<%= i %><%= search %>"><%= i %></a></li>
+            <% } %>
+            <% if (i == Number(current) + 4 && i < pages) { %>
+            <li class="page-item disabled"><a>...</a></li>
+            <% } %>
+            <% } %>
+            <% if (current == pages) { %>
+            <li class="disabled"><a class="page-link">Last</a></li>
+            <% } else { %>
+            <li><a class="page-link" href="/admin/quan-ly-hoan-canh-kho-khan/<%= pages %><%= search %>">Last</a></li>
+            <% } %>
+          </ul>
+          <% } %>
+        </nav>
+      </div>
+
+
+<%include ../footer_admin%>
+  
